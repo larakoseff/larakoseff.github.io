@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.7.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 800 800" style="enable-background:new 0 0 800 800;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:none;stroke:#FFFFFF;stroke-width:16.6667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:66.6667;}
+</style>
+<ellipse transform="matrix(0.1602 -0.9871 0.9871 0.1602 -2.5241 445.6999)" class="st0" cx="260.7" cy="224.3" rx="12.5" ry="12.5"/>
+<line class="st1" x1="260.7" y1="282.2" x2="260.7" y2="531.8"/>
+<path class="st1" d="M551.8,531.8V371.7c-0.1-53.5-43.5-96.9-97-97c-53.6,0-97.1,43.4-97.2,97v160.2"/>
+<line class="st1" x1="357.7" y1="371.7" x2="357.7" y2="282.2"/>
+<path class="st1" d="M675,91.7H125c-18.4,0-33.3,14.9-33.3,33.3v550c0,18.4,14.9,33.3,33.3,33.3h550c18.4,0,33.3-14.9,33.3-33.3V125
+	C708.3,106.6,693.4,91.7,675,91.7z"/>
+</svg>
