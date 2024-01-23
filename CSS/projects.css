@@ -377,8 +377,8 @@ p {
   }
 
   .dropdown {
-    position: relative;
-    display: inline-block;
+    position: sticky;
+    top:0;
   }
 
   .dropdown-content {
