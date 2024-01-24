@@ -100,7 +100,6 @@ main {
   flex-direction: column;
   width: 50vw;
   align-items: stretch;
-
   gap: 10px;
 }
 

@@ -1,6 +1,5 @@
 * {
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
@@ -96,11 +95,12 @@ main {
 }
 
 .main-flex-container {
+  margin: 2rem;
   display: flex;
   flex-direction: column;
   width: 50vw;
   align-items: stretch;
-  margin: 1.5rem;
+  gap: 10px;
 }
 
 .main-item-1 {
@@ -110,15 +110,11 @@ main {
   background-color: #7600ff;
   color: aliceblue;
   padding-left: 30px;
-  padding-top: 3px;
-  padding-bottom: 3px;
   text-align: left;
-  width: auto;
-  margin-right: 1.5rem;
-  margin-top: 0.5rem;
   border-radius: 25px;
   height: 5vh;
   line-height: 5vh;
+  flex: 20%;
 }
 
 .about-icon {
@@ -134,16 +130,14 @@ main {
   letter-spacing: 0.1em;
   background-color: #7600ff;
   color: aliceblue;
-  padding-top: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 20px;
   text-align: left;
-  width: auto;
-  margin-right: 1.5rem;
-  margin-top: 0.5rem;
+  padding-top: 0.8rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 1.5rem;
   border-radius: 25px;
   height: auto;
+  flex: 20%;
 }
 
 /* pages menu */
@@ -166,8 +160,8 @@ main {
   margin-right: 1.5rem;
   margin-top: 0.5rem;
   border-radius: 25px;
-  height: 4vh;
-  line-height: 4vh;
+  height: 5vh;
+  line-height: 5vh;
 }
 
 p {
@@ -366,31 +360,31 @@ p {
     line-height: normal;
     margin: 0;
   }
-
+  
   .menu-button {
-    width: auto;
-    height: 3vh;
-    line-height: 3vh;
-    vertical-align: middle;
-    margin: 0;
+  width: auto;
+  height: 3vh;
+  line-height: 3vh;
+  vertical-align: middle;
+  margin: 0;
   }
-
+  
   .dropdown {
     position: relative;
     display: inline-block;
     margin: 0;
   }
-
+  
   .dropdown-content {
     display: none;
     position: absolute;
     background-color: #fde9ff;
     min-width: 100%;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     margin: 0;
   }
-
+  
   .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -433,20 +427,19 @@ p {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: stretch;
-    width: 92vw;
+    width: 83vw;
   }
 
   .main-item-1 {
     font-family: "Inter", sans-serif;
     font-weight: 400;
     letter-spacing: 0.1em;
-    padding-bottom: 0;
     background-color: #7600ff;
     text-align: left;
     width: auto;
     border-radius: 25px;
     height: 7vh;
-    line-height: 6vh;
+    line-height: 7vh;
   }
 
   .about-icon {
@@ -465,6 +458,11 @@ p {
     width: auto;
     border-radius: 25px;
     height: auto;
+  }
+
+  .project-image {
+    border-radius: 25px;
+    width: 83vw;
   }
 
   /* ----contact circles-----*/
@@ -608,19 +606,6 @@ p {
     height: 3rem;
   }
 
-  .main-item-1 {
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-    padding-bottom: 0;
-    background-color: #7600ff;
-    text-align: left;
-    width: auto;
-    border-radius: 25px;
-    height: 6vh;
-    line-height: 5vh;
-  }
-
   .page-items {
     font-family: "Inter", sans-serif;
     font-weight: 300;
@@ -629,9 +614,11 @@ p {
     background-color: #fde9ff;
     padding: 2px;
     text-align: center;
-    width: 35vw;
+    width: 37vw;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
     border-radius: 25px;
-    height: 6vh;
+    height: 5vh;
     line-height: 5vh;
   }
 
@@ -649,110 +636,7 @@ p {
   .no-animate-head {
     display: none;
   }
-
-    /* ----contact circles-----*/
-
-    .circle-2 {
-      background-color: #49fce3;
-      border-radius: 50%;
-      width: 15%;
-      line-height: 0;
-  
-      /* circle 2 position */
-      position: fixed;
-      bottom: 40px;
-      right: 30px;
-  
-      /* circle 2 animation */
-      animation-name: circle-translate-2;
-      animation-duration: 4s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in;
-      animation-direction: alternate;
-    }
-  
-    .circle-2::after {
-      content: "";
-      display: block;
-      padding-bottom: 100%;
-    }
-  
-    .circle-3 {
-      background-color: #fff200;
-      opacity: 0.7;
-      border-radius: 50%;
-      width: 15%;
-      line-height: 0;
-  
-      /* circle 3 position */
-      position: fixed;
-      bottom: 70px;
-      right: 60px;
-  
-      /*circle animation 3 */
-      animation-name: circle-translate-1;
-      animation-duration: 4s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in;
-      animation-direction: alternate;
-    }
-  
-    .circle-3::after {
-      content: "";
-      display: block;
-      padding-bottom: 100%;
-    }
-  
-    .circle-1 {
-      color: #000000;
-      background-color: #ff0000;
-      text-align: center;
-      border-radius: 50%;
-      width: 15vw;
-      line-height: 0;
-  
-      /* circle 1 position */
-      position: fixed;
-      bottom: 40px;
-      right: 60px;
-      z-index: 1;
-    }
-  
-  
-    .circle-text {
-      color: #000000;
-      background-color: #ff0000;
-      font-family: "Inter", sans-serif;
-      font-weight: 300;
-      font-size: 2.5vw;
-      position: absolute;
-      bottom: 50%;
-      width: 100%;
-      text-align: center;
-      letter-spacing: 0.1em;
-    }
-
-  
-    @keyframes circle-translate-1 {
-      from {
-        transform: translate(0rem, 0rem);
-      }
-      to {
-        transform: translate(2rem, 2rem);
-      }
-    }
-  
-    @keyframes circle-translate-2 {
-      from {
-        transform: translate(0vw, 0vw);
-      }
-      to {
-        transform: translate(-2rem, -2rem);
-      }
-    }
 }
-
-
 
 /* -------Large Tablet View---------*/
 
@@ -764,6 +648,29 @@ p {
   .no-animate-head {
     display: none;
   }
+}
+
+.page-items {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: medium;
+  letter-spacing: 0.1em;
+  background-color: #fde9ff;
+  padding: 2px;
+  text-align: center;
+  width: 28vw;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  border-radius: 25px;
+  height: 4vh;
+  line-height: 4vh;
+}
+
+.menu-icons {
+  width: auto;
+  height: 2.5vh;
+  vertical-align: middle;
+  display: inline-block;
 }
 
 /* -------Desktop View---------*/
