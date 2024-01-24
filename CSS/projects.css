@@ -435,7 +435,7 @@ p {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: stretch;
-    width: 82vw;
+    width: 83vw;
   }
 
   .main-item-1 {
@@ -470,7 +470,7 @@ p {
 
   .project-image {
     border-radius: 25px;
-    width: 82vw;
+    width: 83vw;
   }
 
   /* ----contact circles-----*/
