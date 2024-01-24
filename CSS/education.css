@@ -108,7 +108,7 @@ main {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   letter-spacing: 0.1em;
-  background-color: #7600ff;
+  background-color: #49fce3;
   color: rgb(0, 0, 0);
   padding-left: 30px;
   text-align: left;
@@ -130,7 +130,7 @@ main {
   margin-top: 0.5rem;
   font-family: "Chakra Petch", sans-serif;
   letter-spacing: 0.1em;
-  background-color: #7600ff;
+  background-color: #49fce3;
   color: rgb(0, 0, 0);
   text-align: left;
   padding-top: 0.8rem;
@@ -442,7 +442,7 @@ p {
     font-family: "Inter", sans-serif;
     font-weight: 400;
     letter-spacing: 0.1em;
-    background-color: #7600ff;
+    background-color: #49fce3;
     text-align: left;
     width: auto;
     border-radius: 25px;
@@ -461,7 +461,7 @@ p {
   .main-item-2 {
     font-family: "Chakra Petch", sans-serif;
     letter-spacing: 0.1em;
-    background-color: #7600ff;
+    background-color: #49fce3;
     text-align: left;
     width: auto;
     border-radius: 25px;
