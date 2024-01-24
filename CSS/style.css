@@ -361,6 +361,7 @@ a:active {
   letter-spacing: 0.1em;
   vertical-align: middle;
   line-height: normal;
+  margin: 0;
 }
 
 .menu-button {
@@ -368,11 +369,13 @@ width: auto;
 height: 3vh;
 line-height: 3vh;
 vertical-align: middle;
+margin: 0;
 }
 
 .dropdown {
   position: relative;
   display: inline-block;
+  margin: 0;
 }
 
 .dropdown-content {
@@ -382,6 +385,7 @@ vertical-align: middle;
   min-width: 100%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  margin: 0;
 }
 
 .dropdown-content a {
@@ -393,6 +397,7 @@ vertical-align: middle;
   color: #000000;
   font-weight: 300;
   letter-spacing: 0.1em;
+  margin: 0;
 }
 
 .dropdown-content a:hover {background-color:#fde9ff}
