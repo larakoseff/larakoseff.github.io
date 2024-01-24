@@ -77,8 +77,8 @@ a:visited {
 
 /* mouse over link */
 a:hover {
-  text-decoration: none;
   color: coral;
+  text-decoration: none;
 }
 
 /* selected link */
@@ -95,26 +95,27 @@ main {
 }
 
 .main-flex-container {
+  margin: 2rem;
   display: flex;
   flex-direction: column;
   width: 50vw;
   align-items: stretch;
-  margin: 1.5rem;
+
+  gap: 10px;
 }
 
 .main-item-1 {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   letter-spacing: 0.1em;
-  background-color: #49fce3;
+  background-color: #7600ff;
+  color: rgb(0, 0, 0);
   padding-left: 30px;
   text-align: left;
-  width: auto;
-  margin-right: 1.5rem;
-  margin-top: 0.5rem;
   border-radius: 25px;
-  height: 6vh;
-  line-height: 6vh;
+  height: 5vh;
+  line-height: 5vh;
+  flex: 20%;
 }
 
 .about-icon {
@@ -126,19 +127,25 @@ main {
 }
 
 .main-item-2 {
+  margin-top: 0.5rem;
   font-family: "Chakra Petch", sans-serif;
   letter-spacing: 0.1em;
-  background-color: #49fce3;
-  padding-top: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 20px;
+  background-color: #7600ff;
+  color: rgb(0, 0, 0);
   text-align: left;
-  width: auto;
-  margin-right: 1.5rem;
-  margin-top: 0.5rem;
+  padding-top: 0.8rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 1.5rem;
   border-radius: 25px;
   height: auto;
+  flex: 20%;
+}
+
+.project-image {
+  margin-top: 0.5rem;
+  border-radius: 25px;
+  width: 50vw;
 }
 
 /* pages menu */
@@ -361,31 +368,31 @@ p {
     line-height: normal;
     margin: 0;
   }
-
+  
   .menu-button {
-    width: auto;
-    height: 3vh;
-    line-height: 3vh;
-    vertical-align: middle;
-    margin: 0;
+  width: auto;
+  height: 3vh;
+  line-height: 3vh;
+  vertical-align: middle;
+  margin: 0;
   }
-
+  
   .dropdown {
     position: relative;
     display: inline-block;
     margin: 0;
   }
-
+  
   .dropdown-content {
     display: none;
     position: absolute;
     background-color: #fde9ff;
     min-width: 100%;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     margin: 0;
   }
-
+  
   .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -428,14 +435,14 @@ p {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: stretch;
-    width: 92vw;
+    width: 83vw;
   }
 
   .main-item-1 {
     font-family: "Inter", sans-serif;
     font-weight: 400;
     letter-spacing: 0.1em;
-    background-color: #49fce3;
+    background-color: #7600ff;
     text-align: left;
     width: auto;
     border-radius: 25px;
@@ -454,11 +461,16 @@ p {
   .main-item-2 {
     font-family: "Chakra Petch", sans-serif;
     letter-spacing: 0.1em;
-    background-color: #49fce3;
+    background-color: #7600ff;
     text-align: left;
     width: auto;
     border-radius: 25px;
     height: auto;
+  }
+
+  .project-image {
+    border-radius: 25px;
+    width: 83vw;
   }
 
   /* ----contact circles-----*/
@@ -610,7 +622,7 @@ p {
     background-color: #fde9ff;
     padding: 2px;
     text-align: center;
-    width: 27vw;
+    width: 37vw;
     margin-right: 1rem;
     margin-top: 0.5rem;
     border-radius: 25px;
@@ -644,6 +656,29 @@ p {
   .no-animate-head {
     display: none;
   }
+}
+
+.page-items {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: medium;
+  letter-spacing: 0.1em;
+  background-color: #fde9ff;
+  padding: 2px;
+  text-align: center;
+  width: 28vw;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  border-radius: 25px;
+  height: 4vh;
+  line-height: 4vh;
+}
+
+.menu-icons {
+  width: auto;
+  height: 2.5vh;
+  vertical-align: middle;
+  display: inline-block;
 }
 
 /* -------Desktop View---------*/
