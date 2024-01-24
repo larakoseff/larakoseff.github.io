@@ -649,9 +649,10 @@ display: none;
  }
  
  .dropdown {
-   position: relative;
-   display: inline-block;
- }
+  position: sticky;
+  top: 0;
+  margin: 0;
+}
  
  .dropdown-content {
    display: none;
