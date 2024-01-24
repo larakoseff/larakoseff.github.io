@@ -1,119 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact</title>
-    <!-- favicon -->
-    <link rel="icon" type="image/x-icon" href="./images/favicon-logo.svg">
-    <!-- custom fonts -->
-    <link rel="stylesheet" href="./CSS/contact.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>contact</title>
+  <!-- favicon -->
+  <link rel="icon" type="image/x-icon" href="./images/favicon-logo.svg">
+  <!-- custom fonts -->
+  <link rel="stylesheet" href="./CSS/contact.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
-    <header> 
-       
- <!-- header not animated --> 
-<img src="./images/logo.svg" alt="logo" class="no-animate-head">
-<div></div>
-        
-        <section class="name-flex">
-          <div><img src="./images/L.svg" alt="L" class="letter"></div>
-          <div><img src="./images/A.svg" alt="A" class="letter"></div>
-          <div><img src="./images/R.svg" alt="R" class="letter"></div>
-          <div><img src="./images/A.svg" alt="A" class="letter"></div>
-          <div><img src="./images/empty-space.svg" alt="empty" class="letter"></div>
-          <div><img src="./images/K.svg" alt="K" class="letter"></div>
-          <div><img src="./images/O.svg" alt="O" class="letter"></div>
-          <div><img src="./images/S.svg" alt="S" class="letter"></div>
-          <div><img src="./images/E.svg" alt="E" class="letter"></div>
-          <div><img src="./images/F.svg" alt="F" class="letter"></div>
-          <div><img src="./images/F.svg" alt="F" class="letter"></div>
-      </section>  
-       </header>
-    <!-- mobile menu --> 
-<div class="dropdown">
-    <button class="dropbtn">menu  <img src="./images/mobile-menu.svg" alt="menu" class="menu-button"></button>
+  <header>
+
+    <!-- header not animated -->
+    <img src="./images/logo.svg" alt="logo" class="no-animate-head">
+    <div></div>
+
+    <section class="name-flex">
+      <div><img src="./images/L.svg" alt="L" class="letter"></div>
+      <div><img src="./images/A.svg" alt="A" class="letter"></div>
+      <div><img src="./images/R.svg" alt="R" class="letter"></div>
+      <div><img src="./images/A.svg" alt="A" class="letter"></div>
+      <div><img src="./images/empty-space.svg" alt="empty" class="letter"></div>
+      <div><img src="./images/K.svg" alt="K" class="letter"></div>
+      <div><img src="./images/O.svg" alt="O" class="letter"></div>
+      <div><img src="./images/S.svg" alt="S" class="letter"></div>
+      <div><img src="./images/E.svg" alt="E" class="letter"></div>
+      <div><img src="./images/F.svg" alt="F" class="letter"></div>
+      <div><img src="./images/F.svg" alt="F" class="letter"></div>
+    </section>
+  </header>
+  <!-- mobile menu -->
+  <div class="dropdown">
+    <button class="dropbtn">menu <img src="./images/mobile-menu.svg" alt="menu" class="menu-button"></button>
     <div class="dropdown-content">
-    <a href="./about.html">about</a>
-    <a href="./education.html">education & skills</a>
-    <a href="./experience.html">experience</a>
-    <a href="./projects.html">projects</a>
-    <a href="./index.html">home</a>
+      <a href="./about.html">about</a>
+      <a href="./education.html">education & skills</a>
+      <a href="./experience.html">experience</a>
+      <a href="./projects.html">projects</a>
+      <a href="./index.html">home</a>
     </div>
-  </div>   
-    <main>
+  </div>
+  <main>
     <section class="main-flex-container">
-        <div class="main-item-1">
-            contact <img src="./images/contact-icon-white.svg" alt="contact" class="menu-icons">
+      <div class="main-item-1">
+        contact <img src="./images/contact-icon-white.svg" alt="contact" class="menu-icons">
         </a></div>
+      </div>
+      <div class="main-item-2">
+        <form method="post">
+          <label class="name" for="name">
+            Name:
+            <span aria-label="required"></span><input id="name" required />
+          </label>
+          <label class="email" for="email">
+            Email:
+            <input id="email" type="email" required />
+          </label>
+          <div class="subject"><label for="subject">Subject:</label>
+            <select name="subject" id="subject" required>
+          </div>
+          <option value="work">I'm interested in working together</option>
+          <option value="question">I have a question/comment</option>
+          <option value="hi">Just wanted to say hi</option>
+          <option value="other">Other</option>
+          </select>
+          <div class="form-item"><label for="message" class="texttop">Message:</label></div>
+          <div><textarea name="about" id="message" cols="50" rows="7"></textarea></div>
+          <button class="form-btn" id="btn">
+            Submit
+          </button>
+        </form>
+        <br>
+        <div class="social-flex">
+          <div><a href="https://www.instagram.com/lonkavite/?hl=en" target="_blank"><img
+                src="./images/instagram-icon-white.svg" alt="instagram" class="social-icons"></a></div>
+          <div><a href="https://www.linkedin.com/in/lara-koseff-37a04b7/?originalSubdomain=za" target="_blank"><img
+                src="./images/linkedin-icon-white.svg" alt="linkedin" class="social-icons"></a></div>
+          <div><a href="https://github.com/larakoseff" target="_blank"><img src="./images/github-icon-white.svg"
+                alt="github" class="social-icons"></div></a>
+          <div><a href="mailto:larakoseff@gmail.com" target="_blank"><img src="./images/email-icon-white.svg"
+                alt="email" class="social-icons"></div></a>
         </div>
-        <div class="main-item-2">
-            <form action="https://formsubmit.co/larakoseff@gmail.com" method="post">
-                <label class="name" for="name-field">
-                  Name:
-                  <span aria-label="required"></span><input id="name-field" required />
-                </label>
-                <label class="email" for="email-field">
-                  Email:
-                <input id="email-field" type="email" required />
-                </label>
-                <div class="subject"><label for="subject">Subject:</label>
-                <select name="subject" id="subject" required></div>
-                    <option value="work">I'm interested in working together</option>
-                    <option value="question">I have a question/comment</option>
-                    <option value="hi">Just wanted to say hi</option>
-                    <option value="other">Other</option>
-                  </select>
-                <div class="form-item"><label for="message" class="texttop">Message:</label></div>
-                <div><textarea name="about" cols="50" rows="7"></textarea></div>
-                <button class="form-btn">
-                  Submit
-                </button>
-              </form>
-            <br> 
-            <div class="social-flex">
-                <div><a href="https://www.instagram.com/lonkavite/?hl=en" target="_blank"><img src="./images/instagram-icon-white.svg" alt="instagram" class="social-icons"></a></div>
-                <div><a href="https://www.linkedin.com/in/lara-koseff-37a04b7/?originalSubdomain=za" target="_blank"><img src="./images/linkedin-icon-white.svg" alt="linkedin" class="social-icons"></a></div>
-                <div><a href="https://github.com/larakoseff" target="_blank"><img src="./images/github-icon-white.svg" alt="github" class="social-icons"></div></a>
-                <div><a href="mailto:larakoseff@gmail.com" target="_blank"><img src="./images/email-icon-white.svg" alt="email" class="social-icons"></div></a>
-            </div>
 
     </section>
-    <!-- about page menu --> 
+    <!-- about page menu -->
     <aside class="pages-flex-container" id="page-menu">
       <div class="page-items"><a href="./about.html">
-        about <img src="./images/about-icon.svg" alt="about" class="menu-icons">
-    </a></div>
-    <div class="page-items"><a href="./education.html">
-      education & skills <img src="./images/education-icon.svg" alt="education" class="menu-icons">
-  </a></div>
-        <div class="page-items"><a href="./experience.html">
-            experience <img src="./images/experience-icon.svg" alt="education" class="menu-icons">
+          about <img src="./images/about-icon.svg" alt="about" class="menu-icons">
         </a></div>
-        <div class="page-items"><a href="./projects.html">
-            projects <img src="./images/projects-icon.svg" alt="projects" class="menu-icons">
+      <div class="page-items"><a href="./education.html">
+          education & skills <img src="./images/education-icon.svg" alt="education" class="menu-icons">
         </a></div>
-        <div class="page-items"><a href="./index.html">
-            home <img src="./images/home-icon.svg" alt="home" class="menu-icons">
+      <div class="page-items"><a href="./experience.html">
+          experience <img src="./images/experience-icon.svg" alt="education" class="menu-icons">
         </a></div>
-        <aside>
-</main>
+      <div class="page-items"><a href="./projects.html">
+          projects <img src="./images/projects-icon.svg" alt="projects" class="menu-icons">
+        </a></div>
+      <div class="page-items"><a href="./index.html">
+          home <img src="./images/home-icon.svg" alt="home" class="menu-icons">
+        </a></div>
+      <aside>
+  </main>
+  <script src="https://smtpjs.com/v3/smtp.js">
+  </script>
+  <script>
+    const btn = document.getElementById('btn')
+    btn.addEventListener('click', function (e) {
+      e.preventDefault()
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+      const body = 'name: ' + name + '<br/> email:  ' + email + '<br/> subject: ' + subject + '<br/> message:  ' + message;
 
-
-
-<!-- footer 
-</section>
-<section class="contact">
-<div class="circle-1"><div class="circle-text"><a href="./contact.html">contact</a></div></div>
-</section>
-<section>
-    <div class="circle-2"></div>
-    <div class="circle-3"></div>
-</section> 
--->  
+        Email.send({
+          SecureToken: "9411fb2e-ac60-46ad-9d0f-8b1155e0854b",
+          To: 'mardouthegnu@gmail',
+          From: "larakoseff@gmail.com",
+          Subject: "contact message",
+          Body: body
+        }).then(
+          message => alert("Thank you for your message, I'll get back to you shortly.")
+        );
+    })
+  </script>
 </body>
+
 </html>
