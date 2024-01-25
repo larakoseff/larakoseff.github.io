@@ -346,25 +346,37 @@ p {
   .dropbtn {
     background-color: #fde9ff;
     color: rgb(0, 0, 0);
-    padding: 16px;
     width: 100vw;
     border: none;
     cursor: pointer;
-    font-size: 120%;
     font-family: "Inter", sans-serif;
     color: #000000;
     font-weight: 300;
     letter-spacing: 0.1em;
-    vertical-align: middle;
-    line-height: normal;
     margin: 0;
   }
 
-  .menu-button {
-    width: auto;
-    height: 3vh;
-    line-height: 3vh;
-    vertical-align: middle;
+  #menu-icon {
+    width: 5vh;
+    padding: 12px;
+  }
+
+  .menu-button, .close-btn {
+    background-color: #fde9ff;
+    color: rgb(0, 0, 0);
+    border: none;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .menu-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100vw;
+    position: sticky;
+    top: 0;
     margin: 0;
   }
 
@@ -407,7 +419,6 @@ p {
   .dropdown:hover .dropbtn {
     background-color: #fde9ff;
   }
-
   .name-flex {
     display: none;
   }
@@ -536,196 +547,44 @@ p {
 
 /* -------Large Mobile/Small Tablet View---------*/
 
+
 @media all and (min-width: 601px) and (max-width: 820px) {
-  .pages-flex-container {
-    display: none;
+  .letter {
+    height: 3rem;
   }
 
-  .dropbtn {
-    background-color: #fde9ff;
-    color: rgb(0, 0, 0);
-    padding: 16px;
-    width: 100vw;
-    border: none;
-    cursor: pointer;
-    font-size: 120%;
+  .page-items {
     font-family: "Inter", sans-serif;
-    color: #000000;
     font-weight: 300;
+    font-size: medium;
     letter-spacing: 0.1em;
-    vertical-align: middle;
-    line-height: normal;
+    background-color: #fde9ff;
+    padding: 2px;
+    text-align: center;
+    width: 37vw;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+    border-radius: 25px;
+    height: 5vh;
+    line-height: 5vh;
   }
 
-  .menu-button {
+  .menu-icons {
     width: auto;
-    height: 3vh;
-    line-height: 3vh;
+    height: 2.5vh;
     vertical-align: middle;
-  }
-
-  .dropdown {
-    position: relative;
     display: inline-block;
   }
 
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fde9ff;
-    min-width: 100%;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
-
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-family: "Inter", sans-serif;
-    color: #000000;
-    font-weight: 300;
-    letter-spacing: 0.1em;
-  }
-
-  .dropdown-content a:hover {
-    background-color: #fde9ff;
-  }
-
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-
-  .dropdown:hover .dropbtn {
-    background-color: #fde9ff;
-  }
-
-  .name-flex {
+  .dropdown {
     display: none;
   }
 
   .no-animate-head {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-  }
-
-  main {
-    margin: 0;
-  }
-
-  .main-flex-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: stretch;
-    width: 94vw;
-  }
-
-  .main-item-1 {
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-    background-color: #ff0000;
-    color: aliceblue;
-    text-align: left;
-    width: auto;
-    border-radius: 25px;
-    height: 5vh;
-    line-height: 5vh;
-  }
-
-  .about-icon {
-    width: auto;
-    height: 5vh;
-    line-height: 5vh;
-    vertical-align: middle;
-    display: inline-block;
-  }
-
-  .main-item-2 {
-    font-family: "Chakra Petch", sans-serif;
-    letter-spacing: 0.1em;
-    background-color: #ff0000;
-    color: aliceblue;
-    text-align: left;
-    width: auto;
-    border-radius: 25px;
-    height: auto;
-  }
-
-  label {
-    width: 6vw;
-    height: 4vh;
-    display: inline-block;
-    padding: 5px;
-    text-align: left;
-  }
-
-  input {
-    display: block;
-    width: 72vw;
-    height: 2.5rem;
-    margin-top: 4px;
-    background-color: #ff0000;
-    font-family: "Chakra Petch", sans-serif;
-    color: aliceblue;
-    padding-left: 1vw;
-    border: none;
-    border-bottom: 1px solid aliceblue;
-  }
-
-  .name {
-    width: auto;
-  }
-
-  .email {
-    width: auto;
-  }
-
-  .subject {
-    width: 5vw;
-  }
-
-  select {
-    background-color: #ff0000;
-    width: 72vw;
-    height: 2.5rem;
-    font-family: "Chakra Petch", sans-serif;
-    color: aliceblue;
-    border: none;
-    border-bottom: 1px solid aliceblue;
-    margin-bottom: 1.5rem;
-  }
-
-  select:focus {
-    border: none;
-    border-bottom: 1px solid aliceblue;
-  }
-
-  textarea {
-    background-color: #ff0000;
-    font-family: "Chakra Petch", sans-serif;
-    color: aliceblue;
-    border: 1px solid aliceblue;
-    margin-bottom: 1rem;
-    width: 72vw;
-  }
-
-  .form-btn {
-    height: 2.5rem;
-    width: 20vw;
-    background-color: #ff0000;
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    color: aliceblue;
-    border-style: solid;
-    border-width: 0.6px;
-    border-color: aliceblue;
-    border-radius: 20px;
-    flex-shrink: 0;
+    display: none;
   }
 }
+
 
 /* -------Large Tablet View---------*/
 
@@ -737,36 +596,44 @@ p {
   .no-animate-head {
     display: none;
   }
+}
 
-  .subject {
-    width: 5vw;
-  }
+.page-items {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: medium;
+  letter-spacing: 0.1em;
+  background-color: #fde9ff;
+  padding: 2px;
+  text-align: center;
+  width: 28vw;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  border-radius: 25px;
+  height: 4vh;
+  line-height: 4vh;
+}
 
-  select {
-    background-color: #ff0000;
-    width: 40vw;
-    height: 2.5rem;
-    font-family: "Chakra Petch", sans-serif;
-    color: aliceblue;
-    border: none;
-    border-bottom: 1px solid aliceblue;
-    margin-bottom: 1.5rem;
-  }
+.menu-icons {
+  width: auto;
+  height: 2.5vh;
+  vertical-align: middle;
+  display: inline-block;
+}
 
-  .page-items {
-    font-family: "Inter", sans-serif;
-    font-weight: 300;
-    letter-spacing: 0.1em;
-    background-color: #fde9ff;
-    padding: 5px;
-    text-align: center;
-    width: 27vw;
-    margin-right: 1.5rem;
-    margin-top: 0.5rem;
-    border-radius: 25px;
-    height: 5vh;
-    line-height: 5vh;
-  }
+.subject {
+  width: 5vw;
+}
+
+select {
+  background-color: #ff0000;
+  width: 42vw;
+  height: 2.5rem;
+  font-family: "Chakra Petch", sans-serif;
+  color: aliceblue;
+  border: none;
+  border-bottom: 1px solid aliceblue;
+  margin-bottom: 1.5rem;
 }
 
 /* -------Desktop View---------*/
