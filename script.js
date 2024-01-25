@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Contact form 
 
+
+
 const btn = document.getElementById('btn')
 btn.addEventListener('click', function (e) {
   e.preventDefault()

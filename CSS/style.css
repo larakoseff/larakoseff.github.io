@@ -364,13 +364,22 @@ a:active {
     padding: 12px;
   }
 
-  .menu-button {
+  .menu-button, .close-btn {
     background-color: #fde9ff;
     color: rgb(0, 0, 0);
     border: none;
-    width: 10vw;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
     margin: 0;
   }
+.close-btn {
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+}
 
   .menu-container {
     display: flex;
@@ -379,8 +388,8 @@ a:active {
   }
 
   .dropdown {
-    position: relative;
-    display: inline-block;
+    position: sticky;
+    top: 0;
     margin: 0;
   }
 
