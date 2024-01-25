@@ -583,6 +583,12 @@ p {
   .no-animate-head {
     display: none;
   }
+
+  .social-icons {
+    width: auto;
+    height: 5vh;
+    padding-top: 1rem;
+  }
 }
 
 
