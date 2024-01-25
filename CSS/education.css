@@ -349,6 +349,14 @@ p {
 /* -------Mobile View---------*/
 
 @media all and (max-width: 600px) {
+
+  body {
+    background-image: url(../images/background_ed_mobile.jpg);
+    background-size: 100%;
+    margin: 0;
+    text-decoration: none;
+  }
+
   .pages-flex-container {
     display: none;
   }
