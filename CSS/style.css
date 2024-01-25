@@ -440,7 +440,7 @@ a:active {
     width: 40vw;
     border-radius: 30px;
     height: 22vh;
-    margin-left: 1.5rem;
+    margin-left: 1rem;
     border-radius: 20px;
     padding-bottom: 5.5%;
     padding-top: 3%;
@@ -461,7 +461,7 @@ a:active {
   }
 
   .statement-flex > div {
-    margin-right: 3%;
+    margin-right: 2%;
     margin-bottom: 3%;
   }
 
