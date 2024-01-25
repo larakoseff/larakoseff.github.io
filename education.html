@@ -15,6 +15,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
         rel="stylesheet">
+        <script type="module" src="./script.js" defer></script>
 </head>
 
 <body>
@@ -39,14 +40,19 @@
         </section>
     </header>
     <!-- mobile menu -->
-    <div class="dropdown">
-        <button class="dropbtn">menu <img src="./images/mobile-menu.svg" alt="menu" class="menu-button"></button>
-        <div class="dropdown-content">
-            <a href="./about.html">about</a>
-            <a href="./education.html">education & skills</a>
-            <a href="./experience.html">experience</a>
-            <a href="./projects.html">projects</a>
-            <a href="./index.html">home</a>
+    <div class="menu-container">
+        <div class="dropdown">
+            <div class="dropbtn">
+                <button class="menu-button"><img src="./images/mobile-menu.svg" id="menu-icon" alt="menu"></button>
+            </div>
+            <div class="dropdown-content">
+                <a href="./about.html">about</a>
+                <a href="./education.html">education & skills</a>
+                <a href="./experience.html">experience</a>
+                <a href="./projects.html">projects</a>
+                <a href="./index.html">home</a>
+                <button class="close-btn"><img src="./images/cross-svgrepo-com.svg" id="menu-icon" alt="close"></button>
+            </div>
         </div>
     </div>
     <main>
