@@ -61,13 +61,17 @@
 
 <!-- mobile menu --> 
 <div class="dropdown">
-    <button class="dropbtn">menu  <img src="./images/mobile-menu.svg" alt="menu" class="menu-button"></button>
+    <div class="dropbtn">
+        <button class="menu-button"><img src="./images/mobile-menu.svg" id="menu-icon" alt="menu"></button>
+    <!-- <button class="close-btn">Close</button> -->
+</div>
     <div class="dropdown-content">
     <a href="./about.html">about</a>
     <a href="./education.html">education & skills</a>
     <a href="./experience.html">experience</a>
     <a href="./projects.html">projects</a>
     <a href="./index.html">home</a>
+
     </div>
   </div>
 
@@ -89,6 +93,20 @@
     <div class="circle-2"></div>
     <div class="circle-3"></div>
 </section>  
-
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const dropbtn = document.querySelector(".dropbtn");
+      const dropdownContent = document.querySelector(".dropdown-content");
+      const closeBtn = document.querySelector(".close-btn");
+  
+      dropbtn.addEventListener("click", function () {
+        dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+      });
+  
+      closeBtn.addEventListener("click", function () {
+        dropdownContent.style.display = "none";
+      });
+    });
+  </script>
 </body>
 </html>
