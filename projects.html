@@ -15,6 +15,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
         rel="stylesheet">
+    <script type="module" src="./script.js" defer></script>
 </head>
 
 <body>
@@ -39,40 +40,45 @@
         </section>
     </header>
     <!-- mobile menu -->
-    <div class="dropdown">
-        <button class="dropbtn">menu <img src="./images/mobile-menu.svg" alt="menu" class="menu-button"></button>
-        <div class="dropdown-content">
-            <a href="./about.html">about</a>
-            <a href="./education.html">education & skills</a>
-            <a href="./experience.html">experience</a>
-            <a href="./projects.html">projects</a>
-            <a href="./index.html">home</a>
+    <div class="menu-container">
+        <div class="dropdown">
+            <div class="dropbtn">
+                <button class="menu-button"><img src="./images/mobile-menu.svg" id="menu-icon" alt="menu"></button>
+            </div>
+            <div class="dropdown-content">
+                <a href="./about.html">about</a>
+                <a href="./education.html">education & skills</a>
+                <a href="./experience.html">experience</a>
+                <a href="./projects.html">projects</a>
+                <a href="./index.html">home</a>
+                <button class="close-btn"><img src="./images/cross-svgrepo-com.svg" id="menu-icon" alt="close"></button>
+            </div>
         </div>
     </div>
     <main>
         <section class="main-flex-container">
             <div class="main-item-1"> projects <img src="./images/projects-icon.svg" alt="projects"
-                class="menu-icons"></a></div>
-                <div class="main-item-2">
-                    <h3>Independent projects</h3>
-                    In 2018 I embarked on an independent career and built various platforms, both online and offline,
-                    that supported independent and emergent practice, including <a
-                        href="https://bubblegumclub.co.za/art/offsetculture-art-launches-poster-series-pictorial-nerve/"
-                        target="_blank">offset culture</a> and the <a href="https://underlineprojects.art/"
-                        target="_blank">UNDERLINE show</a>, which was received to much acclaim and led to myself and
-                    co-founder Londi Modiko to being featured on the <a
-                        href="https://www.apollo-magazine.com/40-40-africa/" target="_blank">Apollo 40 Under 40
-                        Africa</a> list in 2020. During this time curatorial projects include LOST LOVER at <a
-                        href="https://www.lanchonetelanchonete.com/" target="_blank">Lanchonete Lanchonete</a>, in Rio
-                    de Janeiro, Brazil and <a href="https://www.rampa.pt/event/lost-lover/" target="_blank">RAMPA</a> in
-                    Porto, Portugal and I don’t understand what you’re talking about, but I know what you mean, with
-                    Paula Borghi at Goodman Gallery in Cape Town and arteBA, Buenos Aires. In 2020, with Modiko and
-                    Nthabiseng Mokoena, I co-founded <a href="https://incca.org.za/" target="_blank">INCCA (Independent
-                        Network for Contemporary Culture & Art)</a>, a non-profit company that aims to foster
-                    independent cultural practice. I continue to work on INCCA projects and offer content, digital
-                    communication and project management for the platform on a primarily voluntary basis.
-                </div>
-                <div><img src="./images/projects-independent.jpg" alt="project image" class="project-image"></div>
+                    class="menu-icons"></a></div>
+            <div class="main-item-2">
+                <h3>Independent projects</h3>
+                In 2018 I embarked on an independent career and built various platforms, both online and offline,
+                that supported independent and emergent practice, including <a
+                    href="https://bubblegumclub.co.za/art/offsetculture-art-launches-poster-series-pictorial-nerve/"
+                    target="_blank">offset culture</a> and the <a href="https://underlineprojects.art/"
+                    target="_blank">UNDERLINE show</a>, which was received to much acclaim and led to myself and
+                co-founder Londi Modiko to being featured on the <a href="https://www.apollo-magazine.com/40-40-africa/"
+                    target="_blank">Apollo 40 Under 40
+                    Africa</a> list in 2020. During this time curatorial projects include LOST LOVER at <a
+                    href="https://www.lanchonetelanchonete.com/" target="_blank">Lanchonete Lanchonete</a>, in Rio
+                de Janeiro, Brazil and <a href="https://www.rampa.pt/event/lost-lover/" target="_blank">RAMPA</a> in
+                Porto, Portugal and I don’t understand what you’re talking about, but I know what you mean, with
+                Paula Borghi at Goodman Gallery in Cape Town and arteBA, Buenos Aires. In 2020, with Modiko and
+                Nthabiseng Mokoena, I co-founded <a href="https://incca.org.za/" target="_blank">INCCA (Independent
+                    Network for Contemporary Culture & Art)</a>, a non-profit company that aims to foster
+                independent cultural practice. I continue to work on INCCA projects and offer content, digital
+                communication and project management for the platform on a primarily voluntary basis.
+            </div>
+            <div><img src="./images/projects-independent.jpg" alt="project image" class="project-image"></div>
 
             <div class="main-item-2">
                 <h3>Web & coding projects</h3>
