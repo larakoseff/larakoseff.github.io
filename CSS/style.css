@@ -383,12 +383,6 @@ a:active {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.05);
 }
 
-  .menu-container {
-    display: flex;
-    justify-content: flex-end;
-    width: 100vw;
-  }
-
   .dropdown {
     position: sticky;
     top: 0;
@@ -456,6 +450,7 @@ a:active {
     bottom: 40px;
     left: 1rem;
     align-items: center;
+    z-index: -1;
   }
 
   .statement-flex {
