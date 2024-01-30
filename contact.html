@@ -15,7 +15,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
     rel="stylesheet">
-    <script type="module" src="./script.js" defer></script>  
+  <script type="module" src="./script.js" defer></script>
 </head>
 
 <body>
@@ -38,21 +38,21 @@
       <div><img src="./images/F.svg" alt="F" class="letter"></div>
     </section>
   </header>
-     <!-- mobile menu -->
-     <div class="menu-container">
-      <div class="dropdown">
-          <div class="dropbtn">
-              <button class="menu-button"><img src="./images/mobile-menu.svg" id="menu-icon" alt="menu"></button>
-          </div>
-          <div class="dropdown-content">
-              <a href="./about.html">about</a>
-              <a href="./education.html">education & skills</a>
-              <a href="./experience.html">experience</a>
-              <a href="./projects.html">projects</a>
-              <a href="./index.html">home</a>
-              <button class="close-btn"><img src="./images/cross-svgrepo-com.svg" id="menu-icon" alt="close"></button>
-          </div>
+  <!-- mobile menu -->
+  <div class="menu-container">
+    <div class="dropdown">
+      <div class="dropbtn">
+        <button class="menu-button"><img src="./images/mobile-menu.svg" id="menu-icon" alt="menu"></button>
       </div>
+      <div class="dropdown-content">
+        <a href="./about.html">about</a>
+        <a href="./education.html">education & skills</a>
+        <a href="./experience.html">experience</a>
+        <a href="./projects.html">projects</a>
+        <a href="./index.html">home</a>
+        <button class="close-btn"><img src="./images/cross-svgrepo-com.svg" id="menu-icon" alt="close"></button>
+      </div>
+    </div>
   </div>
   <main>
     <section class="main-flex-container">
@@ -61,12 +61,12 @@
         </a></div>
       </div>
       <div class="main-item-2">
-        <form method="post">
-          <label class="name" for="name">
+        <form action="#">
+          <label class="name" required>
             Name:
-            <span aria-label="required"></span><input id="name" required />
+            <input id="name"/>
           </label>
-          <label class="email" for="email">
+          <label class="email">
             Email:
             <input id="email" type="email" required />
           </label>
@@ -80,10 +80,11 @@
           </select>
           <div class="form-item"><label for="message" class="texttop">Message:</label></div>
           <div><textarea name="about" id="message" cols="50" rows="7"></textarea></div>
-          <button class="form-btn" id="btn">
+          <button type="submit" class="form-btn" id="btn">
             Submit
           </button>
         </form>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
         <br>
         <div class="social-flex">
           <div><a href="https://www.instagram.com/lonkavite/?hl=en" target="_blank"><img
@@ -116,28 +117,9 @@
         </a></div>
       <aside>
   </main>
-  <script src="https://smtpjs.com/v3/smtp.js">
+
   </script>
   <script>
-    const btn = document.getElementById('btn')
-    btn.addEventListener('click', function (e) {
-      e.preventDefault()
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const subject = document.getElementById('subject').value;
-      const message = document.getElementById('message').value;
-      const body = 'name: ' + name + '<br/> email:  ' + email + '<br/> subject: ' + subject + '<br/> message:  ' + message;
-
-        Email.send({
-          SecureToken: "9411fb2e-ac60-46ad-9d0f-8b1155e0854b",
-          To: 'mardouthegnu@gmail',
-          From: "larakoseff@gmail.com",
-          Subject: "contact message",
-          Body: body
-        }).then(
-          message => alert("Thank you for your message, I'll get back to you shortly.")
-        );
-    })
   </script>
 </body>
 
