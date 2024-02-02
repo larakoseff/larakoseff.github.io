@@ -24,14 +24,15 @@ function sendEmail() {
             if (message == "OK") {
                 Swal.fire({
                     title: "Thank you for the message! I'll get back to you soon(ish).",
-                    icon: "success", 
+                    iconHtml: '<img src="./images/contact-icon-swal.png">',
+                    confirmButtonColor: '#7600ff',
                     customClass: {
                         container: '...',
                         popup: '...',
                         header: '...',
                         title: 'swal-title',
                         closeButton: 'swal-close-btn',
-                        icon: '...',
+                        icon: 'swal-icon',
                         image: '...',
                         htmlContainer: '...',
                         input: '...',

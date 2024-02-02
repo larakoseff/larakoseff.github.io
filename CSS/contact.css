@@ -237,6 +237,11 @@ input {
   background-color: #fcf202;
 }
 
+.swal-icon {
+  border: 0;
+  width: 10px;
+}
+
 .name {
   width: auto;
 }
