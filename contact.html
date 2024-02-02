@@ -62,29 +62,39 @@
       </div>
       <div class="main-item-2">
         <form action="#">
-          <label class="name" required>
-            Name:
-            <input id="name"/>
-          </label>
-          <label class="email">
-            Email:
-            <input id="email" type="email" required />
-          </label>
-          <div class="subject"><label for="subject">Subject:</label>
-            <select name="subject" id="subject" required>
+          <div class="input-field field">
+            <label class="name">
+              Name:
+              <input type="text" placeholder="Full Name" id="name" class="item" autocomplete="off">
+            </label>
           </div>
-          <option value="work">I'm interested in working together</option>
-          <option value="question">I have a question/comment</option>
-          <option value="hi">Just wanted to say hi</option>
-          <option value="other">Other</option>
-          </select>
-          <div class="form-item"><label for="message" class="texttop">Message:</label></div>
-          <div><textarea name="about" id="message" cols="50" rows="7"></textarea></div>
+          <div class="input-field field">
+            <label class="email">
+              Email:
+              <input type="email" placeholder="Email Address" id="email" class="item" autocomplete="off">
+            </label>
+          </div>
+          <div class="input-field field">
+            <div class="subject"><label for="subject">Subject:</label>
+              <select name="subject" id="subject" class="item">
+            </div>
+            <option value="work">I'm interested in working together</option>
+            <option value="question">I have a question/comment</option>
+            <option value="hi">Just wanted to say hi</option>
+            <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="textarea-field field">
+            <div class="form-item"><label for="message" class="texttop">Message:</label></div>
+            <div><textarea name="" id="message" cols="30" rows="10" placeholder="Your Message" class="item"
+              autocomplete="off"></textarea></div>
+          </div>
           <button type="submit" class="form-btn" id="btn">
             Submit
           </button>
         </form>
         <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <br>
         <div class="social-flex">
           <div><a href="https://www.instagram.com/lonkavite/?hl=en" target="_blank"><img

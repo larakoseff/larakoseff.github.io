@@ -17,25 +17,101 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Contact form 
 
+const form = document.querySelector('form');
+const fullName = document.getElementById("name")
+const email = document.getElementById("email")
+const subject = document.getElementById("subject")
+const mess = document.getElementById("message")
 
 
-// const btn = document.getElementById('btn')
-// btn.addEventListener('click', function (e) {
-//   e.preventDefault()
-//   const name = document.getElementById('name').value;
-//   const email = document.getElementById('email').value;
-//   const subject = document.getElementById('subject').value;
-//   const message = document.getElementById('message').value;
-//   const body = 'name: ' + name + '<br/> email:  ' + email + '<br/> subject: ' + subject + '<br/> message:  ' + message;
+function sendEmail() {
 
-//     Email.send({
-//       SecureToken: "9411fb2e-ac60-46ad-9d0f-8b1155e0854b",
-//       To: 'mardouthegnu@gmail',
-//       From: "larakoseff@gmail.com",
-//       Subject: "contact message",
-//       Body: body
-//     }).then(
-//       message => alert("Thank you for your message, I'll get back to you shortly.")
-//     );
-// })
+    const bodyMessage = `Full Name: ${fullName.value}<br> Email: 
+    ${email.value}<br> Message: ${mess.value}`;
+
+    Email.send({
+        SecureToken: "0cd765b1-0b21-4718-9bf5-2cc2c0e5681b",
+        To: 'laragithub@gmail.com',
+        From: "laragithub@gmail.com",
+        Subject: subject.value,
+        Body: bodyMessage
+    }).then(
+        message => {
+            if (message == "OK") {
+                Swal.fire({
+                    title: "Thank you!",
+                    text: "Message sent successfully!",
+                    icon: "success"
+                });
+            }
+        }
+    );
+}
+
+// function checkInputs() {
+//     const items = document.querySelectorAll(".item");
+
+//     for (const item of items) {
+//         if (item.value == "") {
+//             item.classList.add("error");
+//             item.parentElement.classList.add("error");
+//         }
+
+//         if (items[1].value != "") {
+//             checkEmail()
+//         }
+
+//         items[1].addEventListener("keyup", () => {
+//             checkEmail()
+//         })
+
+//         item.addEventListener("keyup", () => {
+//             if (item.value != "") {
+//                 item.classList.remove("error");
+//                 item.parentElement.classList.remove("error");
+//             }
+//             else {
+//                 item.classList.add("error");
+//                 item.parentElement.classList.add("error");
+//             }
+//         })
+//     }
+// }
+
+// function checkEmail() {
+//     const emailRegex = /^([a-z\d\.-]+)@([a-z\d\-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
+//     const errorTxtEmail = document.querySelector(".error-txt.email")
+
+//     if (!email.value.match(emailRegex)) {
+//         email.classList.add("error");
+//         email.parentElement.classList.add("error")
+
+//         if (email.value != "") {
+//             errorTxtEmail.innerText = "Enter a valid email address"
+//         }
+
+//         else {
+//             errorTxtEmail.innerText = "Email Address can't be blank"
+//         }
+//     }
+
+//     else {
+//         email.classList.remove("error");
+//         email.parentElement.classList.remove("error");
+//     }
+// }
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    // checkInputs()
+
+    // if (!fullName.classList.contains("error") && !email.classList.contains("error") && !mess.classList.contains("error")) {
+    //     sendEmail()
+
+    //     form.reset()
+    //     return false
+    // }
+    sendEmail()
+
+})
 
