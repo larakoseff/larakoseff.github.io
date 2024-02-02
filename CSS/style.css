@@ -200,8 +200,7 @@ a:active {
   color: #000000;
 }
 
-.arrow {
-  width: 16px;
+.lm-arrow{
   padding-left: 15%;
 }
 
