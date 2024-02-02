@@ -15,7 +15,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
     rel="stylesheet">
-  <script type="module" src="./script.js" defer></script>
+  <!-- <script type="module" src="./script.contact.js" defer></script> -->
 </head>
 
 <body>
@@ -55,46 +55,46 @@
     </div>
   </div>
   <main>
-    <section class="main-flex-container">
+
+    <div class="main-flex-container">
       <div class="main-item-1">
         contact <img src="./images/contact-icon-white.svg" alt="contact" class="menu-icons">
         </a></div>
-      </div>
-      <div class="main-item-2">
+      <section class="main-item-2">
         <form action="#">
-          <div class="input-field field">
-            <label class="name">
-              Name:
+          <div class="input-box">
+            <div class="input-field field">
+              <label>Name:</label>
               <input type="text" placeholder="Full Name" id="name" class="item" autocomplete="off">
-            </label>
-          </div>
-          <div class="input-field field">
-            <label class="email">
-              Email:
-              <input type="email" placeholder="Email Address" id="email" class="item" autocomplete="off">
-            </label>
-          </div>
-          <div class="input-field field">
-            <div class="subject"><label for="subject">Subject:</label>
-              <select name="subject" id="subject" class="item">
+              <div class="error-txt">Full name can't be blank</div>
             </div>
-            <option value="work">I'm interested in working together</option>
-            <option value="question">I have a question/comment</option>
-            <option value="hi">Just wanted to say hi</option>
-            <option value="other">Other</option>
-            </select>
+            <div class="input-field field">
+              <label>Email:</label>
+              <input type="email" placeholder="Email Address" id="email" class="item" autocomplete="off">
+              <div class="error-txt email">Email Address can't be blank</div>
+            </div>
+            <div class="input-field field">
+              <label>Subject:</label>
+              <select name="subject" id="subject" class="item">
+                <option value="work">I'm interested in working together</option>
+                <option value="question">I have a question/comment</option>
+                <option value="hi">Just wanted to say hi</option>
+                <option value="other">Other</option>
+              </select>
+              <div class="error-txt">Subject can't be blank</div>
+            </div>
           </div>
           <div class="textarea-field field">
-            <div class="form-item"><label for="message" class="texttop">Message:</label></div>
-            <div><textarea name="" id="message" cols="30" rows="10" placeholder="Your Message" class="item"
-              autocomplete="off"></textarea></div>
+            <label>Message:</label>
+            <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message" class="item"
+              autocomplete="off"></textarea>
+            <div class="error-txt">Message can't be blank</div>
           </div>
-          <button type="submit" class="form-btn" id="btn">
-            Submit
-          </button>
+          <button type="submit" class="form-btn" id="btn">Send Message</button>
         </form>
         <script src="https://smtpjs.com/v3/smtp.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <br>
         <br>
         <div class="social-flex">
           <div><a href="https://www.instagram.com/lonkavite/?hl=en" target="_blank"><img
@@ -106,8 +106,14 @@
           <div><a href="mailto:larakoseff@gmail.com" target="_blank"><img src="./images/email-icon-white.svg"
                 alt="email" class="social-icons"></div></a>
         </div>
+      </section>
+    </div>
 
-    </section>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script src="./script.contact.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <!-- about page menu -->
     <aside class="pages-flex-container" id="page-menu">
       <div class="page-items"><a href="./about.html">
@@ -127,10 +133,6 @@
         </a></div>
       <aside>
   </main>
-
-  </script>
-  <script>
-  </script>
 </body>
 
 </html>
