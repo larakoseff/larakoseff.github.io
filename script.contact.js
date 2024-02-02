@@ -23,9 +23,28 @@ function sendEmail() {
         message => {
             if (message == "OK") {
                 Swal.fire({
-                    title: "Thank you!",
-                    text: "Message sent successfully!",
-                    icon: "success"
+                    title: "Thank you for the message! I'll get back to you soon(ish).",
+                    icon: "success", 
+                    customClass: {
+                        container: '...',
+                        popup: '...',
+                        header: '...',
+                        title: 'swal-title',
+                        closeButton: 'swal-close-btn',
+                        icon: '...',
+                        image: '...',
+                        htmlContainer: '...',
+                        input: '...',
+                        inputLabel: '...',
+                        validationMessage: '...',
+                        actions: '...',
+                        confirmButton: 'swal-btn',
+                        denyButton: '...',
+                        cancelButton: '...',
+                        loader: '...',
+                        footer: '....',
+                        timerProgressBar: '....',
+                      }
                 });
             }
         }
