@@ -485,6 +485,10 @@ p {
     width: 83vw;
   }
 
+  .scratch-frame {
+    display: none;
+  }
+
   /* ----contact circles-----*/
 
   .circle-2 {

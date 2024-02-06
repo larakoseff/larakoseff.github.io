@@ -23,7 +23,7 @@ function sendEmail() {
         message => {
             if (message == "OK") {
                 Swal.fire({
-                    title: "Thank you for the message! I'll get back to you soon(ish).",
+                    title: "Thank you for the message! I'll get back to you soon.",
                     iconHtml: '<img src="./images/contact-icon-swal.png">',
                     confirmButtonColor: '#7600ff',
                     customClass: {
