@@ -216,6 +216,10 @@ label {
   text-align: left;
 }
 
+.msg-label {
+  margin-bottom: -5px;
+}
+
 input {
   display: block;
   width: 40vw;
@@ -282,7 +286,7 @@ textarea {
 
 .form-btn {
   height: 2.5rem;
-  width: 10vw;
+  width: 15vw;
   background-color: #ff0000;
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -621,6 +625,10 @@ p {
     height: 5vh;
     padding-top: 1rem;
   }
+
+  .form-btn {
+    width: 25vw;
+  }
 }
 
 /* -------Large Tablet View---------*/
@@ -673,6 +681,10 @@ select {
   margin-bottom: 1.5rem;
 }
 
+.form-btn {
+  width: 25vw;
+}
+
 /* -------Desktop View---------*/
 
 @media all and (min-width: 1101px) {
@@ -682,5 +694,25 @@ select {
 
   .no-animate-head {
     display: none;
+  }
+}
+
+/* -------Landscape View---------*/
+
+@media all and (min-width: 800px) and (max-height: 500px) {
+  .page-items {
+    height: 8vh;
+    line-height: 8vh;
+  }
+
+  .main-item-1 {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-align: left;
+    width: auto;
+    border-radius: 25px;
+    height: 9vh;
+    line-height: 9vh;
   }
 }

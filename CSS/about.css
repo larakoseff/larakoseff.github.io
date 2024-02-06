@@ -715,7 +715,27 @@ p {
 
 /* -------Landscape View---------*/
 
-@media all and (min-width: 800px) and (max-height: 500px) {
+@media all and (min-width: 800px) and (max-height: 600px) {
+  .page-items {
+    height: 9vh;
+    line-height: 9vh;
+  }
+
+  .main-item-1 {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-align: left;
+    width: auto;
+    border-radius: 25px;
+    height: 9vh;
+    line-height: 9vh;
+  }
+}
+
+/* -------Small Landscape View---------*/
+
+@media all and (min-width: 600px) and (max-height: 500px) {
   .page-items {
     height: 8vh;
     line-height: 8vh;
@@ -725,11 +745,10 @@ p {
     font-family: "Inter", sans-serif;
     font-weight: 400;
     letter-spacing: 0.1em;
-    background-color: #fff200;
     text-align: left;
     width: auto;
     border-radius: 25px;
-    height: 9vh;
-    line-height: 9vh;
+    height: 10vh;
+    line-height: 10vh;
   }
-}
+
