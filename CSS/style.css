@@ -359,9 +359,19 @@ a:active {
     margin: 0;
   }
 
+  .closed-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
   #menu-icon {
     width: 5vh;
     padding: 12px;
+  }
+
+  .lk-icon {
+    display: none;
   }
 
   .menu-button,

@@ -15,3 +15,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Mobile dropdown menu - display of icon after header has been scrolled
+
+window.addEventListener('scroll', function() {
+    const header = document.getElementById('header');
+    const lkIcon = document.querySelector('.lk-icon');
+
+    // Get the height of the header
+    const headerHeight = header.offsetHeight;
+
+    // Check if the user has scrolled past the header
+    if (window.scrollY > headerHeight) {
+        // Show the lk-icon
+        lkIcon.style.display = 'block';
+    } else {
+        // Hide the lk-icon
+        lkIcon.style.display = 'none';
+    }
+});
+
