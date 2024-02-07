@@ -27,7 +27,6 @@ function sendEmail() {
                     iconHtml: '<img src="./images/contact-icon-swal.png">',
                     confirmButtonColor: '#7600ff',
                     background: '#fde9ff',
-                    borderRadius: '25px',
                     customClass: {
                         container: '',
                         popup: 'swal-container',
