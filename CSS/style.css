@@ -339,6 +339,12 @@ a:active {
 /* -------Mobile View---------*/
 
 @media all and (max-width: 600px) {
+  body {
+    background-image: url(../images/home-moble.jpg);
+    background-size: 100%;
+    margin: 0;
+    text-decoration: none;
+  }
 
   .menu {
     display: none;
