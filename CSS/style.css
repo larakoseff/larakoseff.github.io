@@ -862,19 +862,13 @@ a:active {
 /* -------Small Landscape View---------*/
 
 @media all and (min-width: 600px) and (max-height: 500px) {
-  .page-items {
-    height: 8vh;
-    line-height: 8vh;
+
+  .statement {
+    display: none;
   }
 
-  .main-item-1 {
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-    text-align: left;
-    width: auto;
-    border-radius: 25px;
-    height: 10vh;
-    line-height: 10vh;
+  #menu-icon {
+    width: 10vh;
+    padding: 12px;
   }
 }
