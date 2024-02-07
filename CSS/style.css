@@ -340,7 +340,7 @@ a:active {
 
 @media all and (max-width: 600px) {
   body {
-    background-image: url(../images/home-moble.jpg);
+    background-image: url(../images/background-image-about.jpg);
     background-size: 100%;
     margin: 0;
     text-decoration: none;
