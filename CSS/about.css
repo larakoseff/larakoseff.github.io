@@ -371,7 +371,15 @@ p {
     letter-spacing: 0.1em;
     margin: 0;
   }
+  .closed-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 
+  .lk-icon {
+    display: none;
+  }
   #menu-icon {
     width: 5vh;
     padding: 12px;

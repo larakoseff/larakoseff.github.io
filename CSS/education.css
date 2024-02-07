@@ -380,14 +380,16 @@ p {
     justify-content: space-evenly;
   }
 
+  .lk-icon {
+    display: none;
+  }
+
   #menu-icon {
     width: 5vh;
     padding: 12px;
   }
 
-  .lk-icon {
-    display: none;
-  }
+
 
   .menu-button, .close-btn {
     background-color: #fde9ff;
