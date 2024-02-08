@@ -178,13 +178,13 @@ a:active {
 .learn-more {
   border: solid white 1px;
   border-radius: 30px;
-  width: 25vw;
+  width: 15vw;
   height: 5vh;
   line-height: 5vh;
   text-align: center;
   font-family: "Inter", sans-serif;
   font-weight: 300;
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.1em;
   padding-left: 5%;
   padding-right: 2%;
@@ -449,7 +449,7 @@ a:active {
     font-size: small;
     width: 40vw;
     border-radius: 30px;
-    height: 22vh;
+    height: 25vh;
     margin-left: 1rem;
     border-radius: 20px;
     padding-bottom: 5.5%;
@@ -748,7 +748,7 @@ a:active {
     font-size: small;
     width: 40vw;
     border-radius: 30px;
-    height: 22vh;
+    height: 12vh;
     margin-left: 1rem;
     border-radius: 20px;
     padding-bottom: 5.5%;
@@ -829,6 +829,10 @@ a:active {
   .arrow {
     width: 16px;
     padding-left: 1%;
+  }
+
+  .learn-more {
+    width: 35vw;
   }
 }
 
