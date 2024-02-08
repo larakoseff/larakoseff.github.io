@@ -587,24 +587,6 @@ a:active {
     letter-spacing: 0.1em;
   }
 
-
-  @keyframes circle-translate-1 {
-    from {
-      transform: translate(0rem, 0rem);
-    }
-    to {
-      transform: translate(2rem, 2rem);
-    }
-  }
-
-  @keyframes circle-translate-2 {
-    from {
-      transform: translate(0vw, 0vw);
-    }
-    to {
-      transform: translate(-2rem, -2rem);
-    }
-  }
 }
 
 /* -------Large Mobile/Small Tablet View---------*/
@@ -765,6 +747,29 @@ a:active {
     width: 12px;
     padding-left: 2%;
   }
+
+   /* ----contact circles-----*/
+
+   .circle-2 {
+    width: 15%;
+  }
+
+  .circle-3 {
+    width: 15%;
+  }
+
+  .circle-1 {
+    width: 15%;
+    /* circle 1 position */
+    position: fixed;
+    bottom: 40px;
+    right: 60px;
+  }
+
+  .circle-text {
+    font-size: 2.5vw;
+  }
+
 }
 
 /* -------Large Tablet View---------*/
@@ -779,9 +784,6 @@ a:active {
   }
 
   statement {
-    background-color: #7600ff;
-    color: azure;
-    font-family: "Chakra Petch", sans-serif;
     width: 58vw;
     border-radius: 30px;
     height: auto;
@@ -827,14 +829,7 @@ a:active {
 
 @media all and (min-width: 800px) and (max-height: 600px) {
   .menu {
-    font-family: "Inter", sans-serif;
-    color: #000000;
-    font-weight: 300;
-    letter-spacing: 0.1em;
-    background-color: #fde9ff;
-    width: 100vw;
     height: 12vh;
-    justify-content: center;
     line-height: 12vh;
   }
 
