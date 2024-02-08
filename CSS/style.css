@@ -145,6 +145,25 @@ a:active {
   text-decoration: none;
 }
 
+.lk-icon-desktop {
+  background-color: #fde9ff;
+  padding: 5px;
+  text-align: center;
+  width: 8vw;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  border-radius: 25px;
+  height: 5vh;
+  line-height: 5vh;
+  position: fixed;
+  top: 0;
+  display: none;
+}
+
+.lk-desktop-only {
+  display: none;
+}
+
 .statement {
   background-color: #7600ff;
   color: azure;
@@ -291,33 +310,6 @@ a:active {
   letter-spacing: 0.1em;
 }
 
-@keyframes circle-color {
-  0% {
-    background-color: #fde9ff;
-  }
-  25% {
-    background-color: #7600ff;
-  }
-  50% {
-    background-color: #49fce3;
-  }
-  75% {
-    background-color: #fcf202;
-  }
-  100% {
-    background-color: #ff0000;
-  }
-}
-
-@keyframes circle-rotate {
-  from {
-    transform: rotate(-360deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 @keyframes circle-translate-1 {
   from {
     transform: translate(0rem, 0rem);
@@ -339,6 +331,10 @@ a:active {
 /* -------Mobile View---------*/
 
 @media all and (max-width: 600px) {
+
+  .lk-desktop-only {
+    display: none;
+  }
 
   .menu {
     display: none;
@@ -591,32 +587,6 @@ a:active {
     letter-spacing: 0.1em;
   }
 
-  @keyframes circle-color {
-    0% {
-      background-color: #fde9ff;
-    }
-    25% {
-      background-color: #7600ff;
-    }
-    50% {
-      background-color: #49fce3;
-    }
-    75% {
-      background-color: #fcf202;
-    }
-    100% {
-      background-color: #ff0000;
-    }
-  }
-
-  @keyframes circle-rotate {
-    from {
-      transform: rotate(-360deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
 
   @keyframes circle-translate-1 {
     from {
@@ -643,6 +613,11 @@ a:active {
   .menu {
     display: none;
   }
+
+  .lk-desktop-only {
+    display: none;
+  }
+
   .dropbtn {
     background-color: #fde9ff;
     color: rgb(0, 0, 0);

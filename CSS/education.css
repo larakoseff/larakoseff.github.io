@@ -27,7 +27,7 @@ header {
 }
 
 .letter {
-  height: 5rem;
+  height: 4rem;
 }
 
 .letter:hover {
@@ -157,6 +157,12 @@ main {
   flex-grow: 2;
 }
 
+.aside-sticky {
+  position: sticky;
+  top: 10px;
+  margin: 0;
+}
+
 .page-items {
   font-family: "Inter", sans-serif;
   font-weight: 300;
@@ -170,6 +176,21 @@ main {
   border-radius: 25px;
   height: 5vh;
   line-height: 5vh;
+}
+
+.lk-icon-desktop {
+  background-color: #fde9ff;
+  padding: 5px;
+  text-align: center;
+  width: 8vw;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  border-radius: 25px;
+  height: 5vh;
+  line-height: 5vh;
+  position: fixed;
+  top: 0;
+  display: none;
 }
 
 p {
@@ -349,6 +370,10 @@ p {
 /* -------Mobile View---------*/
 
 @media all and (max-width: 600px) {
+
+  .lk-desktop-only {
+    display: none;
+  }
 
   body {
     background-image: url(../images/background_ed_mobile.jpg);
@@ -593,51 +618,6 @@ p {
     text-align: center;
     letter-spacing: 0.1em;
   }
-
-  @keyframes circle-color {
-    0% {
-      background-color: #fde9ff;
-    }
-    25% {
-      background-color: #7600ff;
-    }
-    50% {
-      background-color: #49fce3;
-    }
-    75% {
-      background-color: #fcf202;
-    }
-    100% {
-      background-color: #ff0000;
-    }
-  }
-
-  @keyframes circle-rotate {
-    from {
-      transform: rotate(-360deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  @keyframes circle-translate-1 {
-    from {
-      transform: translate(0rem, 0rem);
-    }
-    to {
-      transform: translate(2rem, 2rem);
-    }
-  }
-
-  @keyframes circle-translate-2 {
-    from {
-      transform: translate(0vw, 0vw);
-    }
-    to {
-      transform: translate(-2rem, -2rem);
-    }
-  }
 }
 
 /* -------Large Mobile/Small Tablet View---------*/
@@ -661,6 +641,12 @@ p {
     border-radius: 25px;
     height: 5vh;
     line-height: 5vh;
+  }
+
+  .lk-icon-desktop {
+    width: 12vw;
+    height: 4vh;
+    line-height: 4vh;
   }
 
   .menu-icons {

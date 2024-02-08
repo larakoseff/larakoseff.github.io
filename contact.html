@@ -16,6 +16,11 @@
     href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
     rel="stylesheet">
   <script type="module" src="./script.js" defer></script>
+  <style>
+    body {
+      background-image: url(./images/background-image-contact.jpg);
+    }
+  </style>
 </head>
 
 <body>
@@ -45,7 +50,7 @@
         <div class="closed-menu">
           <img src="./images/favicon-logo.svg" id="menu-icon" class="lk-icon">
           <button class="menu-button"><img src="./images/mobile-menu.svg" id="menu-icon" alt="menu"></button>
-      </div>
+        </div>
       </div>
       <div class="dropdown-content">
         <br>
@@ -60,6 +65,13 @@
       </div>
     </div>
   </div>
+
+  <!-- LK icon desktop -->
+  <div class="lk-desktop-only">
+    <div><a href="./index.html"><img src="./images/favicon-logo.svg" id="menu-icon" class="lk-icon-desktop"></a>
+    </div>
+  </div>
+
   <main>
 
     <div class="main-flex-container">
@@ -122,21 +134,23 @@
 
     <!-- about page menu -->
     <aside class="pages-flex-container" id="page-menu">
-      <div class="page-items"><a href="./about.html">
-          about <img src="./images/about-icon.svg" alt="about" class="menu-icons">
-        </a></div>
-      <div class="page-items"><a href="./education.html">
-          education & skills <img src="./images/education-icon.svg" alt="education" class="menu-icons">
-        </a></div>
-      <div class="page-items"><a href="./experience.html">
-          experience <img src="./images/experience-icon.svg" alt="education" class="menu-icons">
-        </a></div>
-      <div class="page-items"><a href="./projects.html">
-          projects <img src="./images/projects-icon.svg" alt="projects" class="menu-icons">
-        </a></div>
-      <div class="page-items"><a href="./index.html">
-          home <img src="./images/home-icon.svg" alt="home" class="menu-icons">
-        </a></div>
+      <div class="aside-sticky">
+        <div class="page-items"><a href="./about.html">
+            about <img src="./images/about-icon.svg" alt="about" class="menu-icons">
+          </a></div>
+        <div class="page-items"><a href="./education.html">
+            education <img src="./images/education-icon.svg" alt="education" class="menu-icons">
+          </a></div>
+        <div class="page-items"><a href="./experience.html">
+            experience <img src="./images/experience-icon.svg" alt="education" class="menu-icons">
+          </a></div>
+        <div class="page-items"><a href="./projects.html">
+            projects <img src="./images/projects-icon.svg" alt="projects" class="menu-icons">
+          </a></div>
+        <div class="page-items"><a href="./index.html">
+            home <img src="./images/home-icon.svg" alt="home" class="menu-icons">
+          </a></div>
+      </div>
       <aside>
   </main>
 </body>

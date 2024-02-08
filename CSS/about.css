@@ -27,7 +27,7 @@ header {
 }
 
 .letter {
-  height: 5rem;
+  height: 4rem;
 }
 
 .letter:hover {
@@ -156,6 +156,12 @@ main {
   flex-grow: 2;
 }
 
+.aside-sticky {
+  position: sticky;
+  top: 10px;
+  margin: 0;
+}
+
 .page-items {
   font-family: "Inter", sans-serif;
   font-weight: 300;
@@ -169,6 +175,21 @@ main {
   border-radius: 25px;
   height: 5vh;
   line-height: 5vh;
+}
+
+.lk-icon-desktop {
+  background-color: #fde9ff;
+  padding: 5px;
+  text-align: center;
+  width: 8vw;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  border-radius: 25px;
+  height: 5vh;
+  line-height: 5vh;
+  position: fixed;
+  top: 0;
+  display: none;
 }
 
 p {
@@ -348,6 +369,11 @@ p {
 /* -------Mobile View---------*/
 
 @media all and (max-width: 600px) {
+
+  .lk-desktop-only {
+    display: none;
+  }
+
   body {
     background-image: url(../images/background_about_mobile.jpg);
     background-size: 100%;
@@ -656,6 +682,12 @@ p {
     border-radius: 25px;
     height: 5vh;
     line-height: 5vh;
+  }
+
+  .lk-icon-desktop {
+    width: 12vw;
+    height: 4vh;
+    line-height: 4vh;
   }
 
   .menu-icons {

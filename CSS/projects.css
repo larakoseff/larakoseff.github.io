@@ -27,7 +27,7 @@ header {
 }
 
 .letter {
-  height: 5rem;
+  height: 4rem;
 }
 
 .letter:hover {
@@ -87,6 +87,9 @@ a:active {
   text-decoration: none;
 }
 
+
+
+
 /* main section*/
 
 main {
@@ -125,6 +128,8 @@ main {
   display: inline-block;
 }
 
+
+
 .main-item-2 {
   margin-top: 0.5rem;
   font-family: "Chakra Petch", sans-serif;
@@ -156,6 +161,12 @@ main {
   flex-grow: 2;
 }
 
+.aside-sticky {
+  position: sticky;
+  top: 10px;
+  margin: 0;
+}
+
 .page-items {
   font-family: "Inter", sans-serif;
   font-weight: 300;
@@ -169,6 +180,21 @@ main {
   border-radius: 25px;
   height: 5vh;
   line-height: 5vh;
+}
+
+.lk-icon-desktop {
+  background-color: #fde9ff;
+  padding: 5px;
+  text-align: center;
+  width: 8vw;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  border-radius: 25px;
+  height: 5vh;
+  line-height: 5vh;
+  position: fixed;
+  top: 0;
+  display: none;
 }
 
 p {
@@ -348,6 +374,11 @@ p {
 /* -------Mobile View---------*/
 
 @media all and (max-width: 600px) {
+
+  .lk-desktop-only {
+    display: none;
+  }
+
   .pages-flex-container {
     display: none;
   }
@@ -641,19 +672,33 @@ p {
   }
 
   .page-items {
-    font-family: "Inter", sans-serif;
-    font-weight: 300;
     font-size: medium;
     letter-spacing: 0.1em;
     background-color: #fde9ff;
     padding: 2px;
     text-align: center;
-    width: 37vw;
+    width: 38vw;
     margin-right: 1rem;
     margin-top: 0.5rem;
     border-radius: 25px;
     height: 5vh;
     line-height: 5vh;
+  }
+
+  .lk-icon-desktop {
+    width: 12vw;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    border-radius: 25px;
+    height: 4vh;
+    line-height: 5vh;
+    position: fixed;
+    top: 0;
+    display: none;
+    /* box-shadow: 0 0 20px 5px #fde9ff,
+    0 0 20px 5px #fde9ff,
+    0 0 20px 5px #fde9ff,
+    0 0 20px 5px #fde9ff;; */
   }
 
   .menu-icons {

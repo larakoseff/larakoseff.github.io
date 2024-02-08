@@ -34,3 +34,22 @@ window.addEventListener('scroll', function() {
     }
 });
 
+// Desktop icon - display of icon after header has been scrolled
+
+window.addEventListener('scroll', function() {
+    const desktopHeader = document.getElementById('header');
+    const lkDesktopIcon = document.querySelector('.lk-icon-desktop');
+
+    // Get the height of the header
+    const desktopHeaderHeight = desktopHeader.offsetHeight;
+
+    // Check if the user has scrolled past the header
+    if (window.scrollY > desktopHeaderHeight) {
+        // Show the lk-icon
+        lkDesktopIcon.style.display = 'block';
+    } else {
+        // Hide the lk-icon
+        lkDesktopIcon.style.display = 'none';
+    }
+});
+

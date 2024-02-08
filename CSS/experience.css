@@ -27,7 +27,7 @@ header {
 }
 
 .letter {
-  height: 5rem;
+  height: 4rem;
 }
 
 .letter:hover {
@@ -107,14 +107,17 @@ main {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   letter-spacing: 0.1em;
-  background-color: #7600ff;
-  color: aliceblue;
   padding-left: 30px;
   text-align: left;
   border-radius: 25px;
   height: 5vh;
   line-height: 5vh;
   flex: 20%;
+}
+
+#main-item-1-experience {
+  background-color: #7600ff;
+  color: aliceblue;
 }
 
 .about-icon {
@@ -128,8 +131,6 @@ main {
 .main-item-2 {
   font-family: "Chakra Petch", sans-serif;
   letter-spacing: 0.1em;
-  background-color: #7600ff;
-  color: aliceblue;
   text-align: left;
   padding-top: 0.8rem;
   padding-left: 1.5rem;
@@ -140,6 +141,11 @@ main {
   flex: 20%;
 }
 
+#main-item-2-experience {
+  background-color: #7600ff;
+  color: aliceblue;
+}
+
 /* pages menu */
 .pages-flex-container {
   margin: 1.5rem;
@@ -147,6 +153,12 @@ main {
   flex-direction: column;
   align-items: end;
   flex-grow: 2;
+}
+
+.aside-sticky {
+  position: sticky;
+  top: 10px;
+  margin: 0;
 }
 
 .page-items {
@@ -162,6 +174,21 @@ main {
   border-radius: 25px;
   height: 5vh;
   line-height: 5vh;
+}
+
+.lk-icon-desktop {
+  background-color: #fde9ff;
+  padding: 5px;
+  text-align: center;
+  width: 8vw;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  border-radius: 25px;
+  height: 5vh;
+  line-height: 5vh;
+  position: fixed;
+  top: 0;
+  display: none;
 }
 
 p {
@@ -293,32 +320,6 @@ p {
   letter-spacing: 0.1em;
 }
 
-@keyframes circle-color {
-  0% {
-    background-color: #fde9ff;
-  }
-  25% {
-    background-color: #7600ff;
-  }
-  50% {
-    background-color: #49fce3;
-  }
-  75% {
-    background-color: #fcf202;
-  }
-  100% {
-    background-color: #ff0000;
-  }
-}
-
-@keyframes circle-rotate {
-  from {
-    transform: rotate(-360deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 @keyframes circle-translate-1 {
   from {
@@ -342,11 +343,8 @@ p {
 
 @media all and (max-width: 600px) {
 
-  body {
-    background-image: url(../images/background_ex_mobile.jpg);
-    background-size: 100%;
-    margin: 0;
-    text-decoration: none;
+  .lk-desktop-only {
+    display: none;
   }
 
   .pages-flex-container {
@@ -462,13 +460,6 @@ p {
   }
 
   .main-item-1 {
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-    background-color: #7600ff;
-    text-align: left;
-    width: auto;
-    border-radius: 25px;
     height: 7vh;
     line-height: 7vh;
   }
@@ -481,16 +472,6 @@ p {
     display: inline-block;
   }
 
-  .main-item-2 {
-    font-family: "Chakra Petch", sans-serif;
-    letter-spacing: 0.1em;
-    background-color: #7600ff;
-    text-align: left;
-    width: auto;
-    border-radius: 25px;
-    height: auto;
-  }
-
   .project-image {
     border-radius: 25px;
     width: 83vw;
@@ -499,8 +480,6 @@ p {
   /* ----contact circles-----*/
 
   .circle-2 {
-    background-color: #49fce3;
-    border-radius: 50%;
     width: 20%;
     line-height: 0;
 
@@ -508,13 +487,6 @@ p {
     position: fixed;
     bottom: 40px;
     right: 30px;
-
-    /* circle 2 animation */
-    animation-name: circle-translate-2;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in;
-    animation-direction: alternate;
   }
 
   .circle-2::after {
@@ -524,9 +496,6 @@ p {
   }
 
   .circle-3 {
-    background-color: #fff200;
-    opacity: 0.7;
-    border-radius: 50%;
     width: 20%;
     line-height: 0;
 
@@ -534,13 +503,6 @@ p {
     position: fixed;
     bottom: 70px;
     right: 60px;
-
-    /*circle animation 3 */
-    animation-name: circle-translate-1;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in;
-    animation-direction: alternate;
   }
 
   .circle-3::after {
@@ -550,10 +512,6 @@ p {
   }
 
   .circle-1 {
-    color: #000000;
-    background-color: #ff0000;
-    text-align: center;
-    border-radius: 50%;
     width: 20vw;
     line-height: 0;
 
@@ -572,62 +530,9 @@ p {
   }
 
   .circle-text {
-    color: #000000;
-    background-color: #ff0000;
-    font-family: "Inter", sans-serif;
-    font-weight: 300;
     font-size: 3vw;
-    position: absolute;
-    bottom: 50%;
-    width: 100%;
-    text-align: center;
-    letter-spacing: 0.1em;
   }
 
-  @keyframes circle-color {
-    0% {
-      background-color: #fde9ff;
-    }
-    25% {
-      background-color: #7600ff;
-    }
-    50% {
-      background-color: #49fce3;
-    }
-    75% {
-      background-color: #fcf202;
-    }
-    100% {
-      background-color: #ff0000;
-    }
-  }
-
-  @keyframes circle-rotate {
-    from {
-      transform: rotate(-360deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  @keyframes circle-translate-1 {
-    from {
-      transform: translate(0rem, 0rem);
-    }
-    to {
-      transform: translate(2rem, 2rem);
-    }
-  }
-
-  @keyframes circle-translate-2 {
-    from {
-      transform: translate(0vw, 0vw);
-    }
-    to {
-      transform: translate(-2rem, -2rem);
-    }
-  }
 }
 
 /* -------Large Mobile/Small Tablet View---------*/
@@ -638,8 +543,6 @@ p {
   }
 
   .page-items {
-    font-family: "Inter", sans-serif;
-    font-weight: 300;
     font-size: medium;
     letter-spacing: 0.1em;
     background-color: #fde9ff;
@@ -651,6 +554,12 @@ p {
     border-radius: 25px;
     height: 5vh;
     line-height: 5vh;
+  }
+
+  .lk-icon-desktop {
+    width: 12vw;
+    height: 4vh;
+    line-height: 4vh;
   }
 
   .menu-icons {
@@ -682,8 +591,6 @@ p {
 }
 
 .page-items {
-  font-family: "Inter", sans-serif;
-  font-weight: 300;
   font-size: medium;
   letter-spacing: 0.1em;
   background-color: #fde9ff;
@@ -725,12 +632,6 @@ p {
   }
 
   .main-item-1 {
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-    text-align: left;
-    width: auto;
-    border-radius: 25px;
     height: 9vh;
     line-height: 9vh;
   }
@@ -745,12 +646,6 @@ p {
   }
 
   .main-item-1 {
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-    text-align: left;
-    width: auto;
-    border-radius: 25px;
     height: 10vh;
     line-height: 10vh;
   }
