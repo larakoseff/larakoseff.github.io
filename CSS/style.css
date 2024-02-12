@@ -94,25 +94,6 @@ header {
   }
 }
 
-/* alternative floating menu
-
-.menu {
-font-family: 'Inter', sans-serif;
-color: #000000;
-font-weight: 300;
-letter-spacing: 0.1em;
-background-color: #FDE9FF;   
-width: 95vw;
-height: 8vh;
-justify-content: center;
-height: 8vh;
-line-height: 8vh;
-margin-top: 2rem;
-margin-left: 1.5rem;
-border-radius: 30px;
-}
-
-*/
 
 .flex-container {
   display: flex;
@@ -485,8 +466,6 @@ a:active {
   /* ----contact circles-----*/
 
   .circle-2 {
-    background-color: #49fce3;
-    border-radius: 50%;
     width: 20%;
     line-height: 0;
 
@@ -494,19 +473,6 @@ a:active {
     position: fixed;
     bottom: 40px;
     right: 20px;
-
-    /* circle 2 animation */
-    animation-name: circle-translate-2;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in;
-    animation-direction: alternate;
-  }
-
-  .circle-2::after {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
   }
 
   .circle-3 {
@@ -520,13 +486,6 @@ a:active {
     position: fixed;
     bottom: 70px;
     right: 50px;
-
-    /*circle animation 3 */
-    animation-name: circle-translate-1;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in;
-    animation-direction: alternate;
   }
 
   .circle-3::after {
@@ -545,13 +504,6 @@ a:active {
     bottom: 40px;
     right: 50px;
     z-index: 1;
-  }
-
-  /* CSS trick to make perfect responsive circle */
-  .circle-1::after {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
   }
 
   .circle-text {
@@ -696,27 +648,13 @@ a:active {
   }
 
   .learn-more {
-    border: solid white 1px;
-    border-radius: 30px;
     width: 60vw;
     height: 5vh;
     line-height: 5vh;
-    text-align: center;
-    font-family: "Inter", sans-serif;
-    font-weight: 300;
     font-size: 1.5vw;
     letter-spacing: 0.1em;
     padding-left: 5%;
     padding-right: 2%;
-  }
-
-  .learn-more:hover {
-    animation-name: divcolor;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in;
-    animation-direction: alternate;
-    color: #000000;
   }
 
   .arrow {
@@ -772,7 +710,6 @@ a:active {
     position: fixed;
     bottom: 40px;
     left: 1rem;
-    align-items: center;
   }
 
   .arrow-edit {
