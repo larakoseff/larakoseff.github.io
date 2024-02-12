@@ -1,4 +1,4 @@
-
+import './components/name-flex.js';
 // Mobile dropdown menu
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -53,3 +53,14 @@ window.addEventListener('scroll', function() {
     }
 });
 
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Select the header element where you want to append the custom element
+    const headerElement = document.querySelector('header');
+
+    // Create an instance of the custom element
+    const nameFlexElement = document.createElement('name-flex');
+
+    // Append the custom element to the header
+    headerElement.appendChild(nameFlexElement);
+});
