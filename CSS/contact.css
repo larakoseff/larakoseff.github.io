@@ -386,25 +386,6 @@ p {
   display: inline-block;
 }
 
-/* menu animation code */
-
-@keyframes divcolor {
-  0% {
-    background-color: #fde9ff;
-  }
-  25% {
-    background-color: #7600ff;
-  }
-  50% {
-    background-color: #49fce3;
-  }
-  75% {
-    background-color: #fcf202;
-  }
-  100% {
-    background-color: #ff0000;
-  }
-}
 
 footer {
   display: none
@@ -531,14 +512,6 @@ footer {
   }
 
   .main-item-1 {
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-    background-color: #ff0000;
-    color: aliceblue;
-    text-align: left;
-    width: auto;
-    border-radius: 25px;
     height: 7vh;
     line-height: 7vh;
   }
@@ -552,12 +525,6 @@ footer {
   }
 
   .main-item-2 {
-    font-family: "Chakra Petch", sans-serif;
-    letter-spacing: 0.1em;
-    background-color: #ff0000;
-    color: aliceblue;
-    text-align: left;
-    width: auto;
     border-radius: 25px;
     height: auto;
   }
@@ -567,9 +534,6 @@ footer {
     width: 70vw;
     height: 2.5rem;
     margin-top: 4px;
-    background-color: #ff0000;
-    font-family: "Chakra Petch", sans-serif;
-    color: aliceblue;
     padding-left: 1vw;
     border: none;
     border-bottom: 1px solid aliceblue;
@@ -588,13 +552,9 @@ footer {
   }
 
   select {
-    background-color: #ff0000;
     width: 70vw;
     height: 2.5rem;
-    font-family: "Chakra Petch", sans-serif;
-    color: aliceblue;
     border: none;
-    border-bottom: 1px solid aliceblue;
     margin-bottom: 1.5rem;
   }
 
@@ -604,10 +564,6 @@ footer {
   }
 
   textarea {
-    background-color: #ff0000;
-    font-family: "Chakra Petch", sans-serif;
-    color: aliceblue;
-    border: 1px solid aliceblue;
     margin-top: 10px;
     margin-bottom: 1rem;
     width: 70vw;
@@ -616,13 +572,6 @@ footer {
   .form-btn {
     height: 2.5rem;
     width: 40vw;
-    background-color: #ff0000;
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    color: aliceblue;
-    border-style: solid;
-    border-width: 0.6px;
-    border-color: aliceblue;
     border-radius: 20px;
     flex-shrink: 0;
   }
@@ -703,13 +652,8 @@ footer {
 }
 
 select {
-  background-color: #ff0000;
   width: 42vw;
   height: 2.5rem;
-  font-family: "Chakra Petch", sans-serif;
-  color: aliceblue;
-  border: none;
-  border-bottom: 1px solid aliceblue;
   margin-bottom: 1.5rem;
 }
 
