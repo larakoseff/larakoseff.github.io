@@ -442,12 +442,8 @@ a:active {
   }
 
   .statement {
-    background-color: #7600ff;
-    color: azure;
-    font-family: "Chakra Petch", sans-serif;
     font-size: small;
     width: 40vw;
-    border-radius: 30px;
     height: 25vh;
     margin-left: 1rem;
     border-radius: 20px;
@@ -455,10 +451,6 @@ a:active {
     padding-top: 3%;
     padding-left: 5%;
     padding-right: 3%;
-    position: fixed;
-    bottom: 40px;
-    left: 1rem;
-    align-items: center;
     z-index: -1;
   }
 
@@ -474,27 +466,15 @@ a:active {
   }
 
   .learn-more {
-    border: solid white 1px;
-    border-radius: 30px;
     width: 25vw;
     height: 5vh;
     line-height: 5vh;
     text-align: center;
-    font-family: "Inter", sans-serif;
     font-weight: 300;
     font-size: 2vw;
     letter-spacing: 0.1em;
     padding-left: 5%;
     padding-right: 2%;
-  }
-
-  .learn-more:hover {
-    animation-name: divcolor;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in;
-    animation-direction: alternate;
-    color: #000000;
   }
 
   .arrow {
@@ -556,9 +536,6 @@ a:active {
   }
 
   .circle-1 {
-    color: #000000;
-    background-color: #ff0000;
-    text-align: center;
     border-radius: 50%;
     width: 20%;
     line-height: 0;
@@ -578,10 +555,6 @@ a:active {
   }
 
   .circle-text {
-    color: #000000;
-    background-color: #ff0000;
-    font-family: "Inter", sans-serif;
-    font-weight: 300;
     font-size: 3vw;
     position: absolute;
     bottom: 50%;
