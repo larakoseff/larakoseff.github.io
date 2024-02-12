@@ -1,4 +1,7 @@
 import './components/name-flex.js';
+import './components/contact-circles.js'
+
+
 // Mobile dropdown menu
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -55,12 +58,13 @@ window.addEventListener('scroll', function() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Select the header element where you want to append the custom element
     const headerElement = document.querySelector('header');
-
-    // Create an instance of the custom element
     const nameFlexElement = document.createElement('name-flex');
-
-    // Append the custom element to the header
     headerElement.appendChild(nameFlexElement);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const footerElement = document.querySelector('footer');
+    const contactCirclesElement = document.createElement('contact-circles');
+    footerElement.appendChild(contactCirclesElement);
 });
