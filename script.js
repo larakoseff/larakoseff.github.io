@@ -1,5 +1,10 @@
 import './components/name-flex.js';
 import './components/contact-circles.js'
+import './components/main-about.js'
+import './components/main-education.js'
+import './components/main-projects.js'
+import './components/main-experience.js'
+
 
 
 // Mobile dropdown menu
@@ -63,8 +68,21 @@ document.addEventListener('DOMContentLoaded', function() {
     headerElement.appendChild(nameFlexElement);
 });
 
+
 document.addEventListener('DOMContentLoaded', function() {
     const footerElement = document.querySelector('footer');
     const contactCirclesElement = document.createElement('contact-circles');
     footerElement.appendChild(contactCirclesElement);
 });
+
+const mainAboutElement = document.createElement('main-about');
+document.body.appendChild(mainAboutElement);
+
+const mainEducationElement = document.createElement('main-education');
+document.body.appendChild(mainEducationElement);
+
+const mainProjectsElement = document.createElement('main-projects');
+document.body.appendChild(mainProjectsElement);
+
+const mainExperienceElement = document.createElement('main-experience');
+document.body.appendChild(mainExperienceElement);

@@ -406,6 +406,10 @@ p {
   }
 }
 
+footer {
+  display: none
+}
+
 /* -------Mobile View---------*/
 
 @media all and (max-width: 600px) {
