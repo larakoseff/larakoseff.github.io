@@ -11,7 +11,7 @@ export class MainExperience extends HTMLElement {
         <section class="main-flex-container">
             <div class="main-item-1" div id="experience">
                 experience <img src="./images/experience-icon-white.svg" alt="experience" class="menu-icons">
-                </a></div>
+                </div>
             </div>
             <div class="main-item-2" id="experience">
                 <h3>Co-Founder & Project Manager at <a href="http://www.incca.org.za" target="_blank">INCCA
