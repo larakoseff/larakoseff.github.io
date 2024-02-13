@@ -86,16 +86,16 @@ export class MainExperience extends HTMLElement {
         <!-- about page menu -->
         <aside class="pages-flex-container" id="page-menu">
             <div class="aside-sticky">
-                <div class="page-items"><a href="./about.html">
+                <div class="page-items"><a href="about">
                         about <img src="./images/about-icon.svg" alt="about" class="menu-icons">
                     </a></div>
-                <div class="page-items"><a href="./education.html">
+                <div class="page-items"><a href="education">
                         education <img src="./images/education-icon.svg" alt="education" class="menu-icons">
                     </a></div>
-                <div class="page-items"><a href="./projects.html">
+                <div class="page-items"><a href="projects">
                         projects <img src="./images/projects-icon.svg" alt="projects" class="menu-icons">
                     </a></div>
-                <div class="page-items"><a href="./index.html">
+                <div class="page-items"><a href="https://larakoseff.github.io/">
                         home <img src="./images/home-icon.svg" alt="home" class="menu-icons">
                     </a></div>
             </div>

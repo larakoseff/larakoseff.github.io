@@ -8,7 +8,7 @@ export class ContactCircles extends HTMLElement {
 <div class="contact">
         <section>
             <div class="circle-1">
-                <div class="circle-text"><a href="./contact.html">contact</a></div>
+                <div class="circle-text"><a href="contact">contact</a></div>
             </div>
         </section>
         <section>
