@@ -5,8 +5,8 @@ export class MainOops extends HTMLElement {
 
     connectedCallback() {
 
-        if (window.location.pathname.includes("404.html")) {
-            this.innerHTML = `
+
+        this.innerHTML = `
          <main class="main-oops">
         <section class="main-flex-container">
             <div class="main-item-1" id="about">
@@ -35,7 +35,7 @@ export class MainOops extends HTMLElement {
             <aside>
             </main>
         `;
-        }
+
     }
 }
 
