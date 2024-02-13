@@ -4,7 +4,7 @@ import './components/main-about.js'
 import './components/main-education.js'
 import './components/main-projects.js'
 import './components/main-experience.js'
-import './components/main-oops.js'
+// import './components/main-oops.js'
 
 
 
@@ -74,8 +74,8 @@ document.body.appendChild(mainProjectsElement);
 const mainExperienceElement = document.createElement('main-experience');
 document.body.appendChild(mainExperienceElement);
 
-const mainOopsElement = document.createElement('main-oops');
-document.body.appendChild(mainOopsElement);
+// const mainOopsElement = document.createElement('main-oops');
+// document.body.appendChild(mainOopsElement);
 
 document.addEventListener('DOMContentLoaded', function () {
     const headerElement = document.querySelector('header');
