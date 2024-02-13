@@ -4,7 +4,7 @@ import './components/main-about.js'
 import './components/main-education.js'
 import './components/main-projects.js'
 import './components/main-experience.js'
-import './components/404.js'
+import './components/main-oops.js'
 
 
 
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Mobile dropdown menu - display of icon after header has been scrolled
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const header = document.getElementById('header');
     const lkIcon = document.querySelector('.lk-icon');
 
@@ -45,7 +45,7 @@ window.addEventListener('scroll', function() {
 
 // Desktop icon - display of icon after header has been scrolled
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const desktopHeader = document.getElementById('header');
     const lkDesktopIcon = document.querySelector('.lk-icon-desktop');
 
@@ -62,20 +62,6 @@ window.addEventListener('scroll', function() {
     }
 });
 
-
-document.addEventListener('DOMContentLoaded', function() {
-    const headerElement = document.querySelector('header');
-    const nameFlexElement = document.createElement('name-flex');
-    headerElement.appendChild(nameFlexElement);
-});
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    const footerElement = document.querySelector('footer');
-    const contactCirclesElement = document.createElement('contact-circles');
-    footerElement.appendChild(contactCirclesElement);
-});
-
 const mainAboutElement = document.createElement('main-about');
 document.body.appendChild(mainAboutElement);
 
@@ -90,3 +76,18 @@ document.body.appendChild(mainExperienceElement);
 
 const mainOopsElement = document.createElement('main-oops');
 document.body.appendChild(mainOopsElement);
+
+document.addEventListener('DOMContentLoaded', function () {
+    const headerElement = document.querySelector('header');
+    const nameFlexElement = document.createElement('name-flex');
+    headerElement.appendChild(nameFlexElement);
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const footerElement = document.querySelector('footer');
+    const contactCirclesElement = document.createElement('contact-circles');
+    footerElement.appendChild(contactCirclesElement);
+});
+
+
