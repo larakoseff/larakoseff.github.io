@@ -1,4 +1,4 @@
-export class Oops extends HTMLElement {
+export class MainOops extends HTMLElement {
     constructor() {
         super();
     }
