@@ -86,3 +86,6 @@ document.body.appendChild(mainProjectsElement);
 
 const mainExperienceElement = document.createElement('main-experience');
 document.body.appendChild(mainExperienceElement);
+
+const mainOopsElement = document.createElement('main-oops');
+document.body.appendChild(mainOopsElement);
