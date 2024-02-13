@@ -1,22 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oops</title>
-        <!-- favicon -->
-        <link rel="icon" type="image/x-icon" href="favicon-logo.svg">
-        <!-- custom fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <link
-            href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
-            rel="stylesheet">
-        <link rel="stylesheet" href="./CSS/pages.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon-logo.svg">
+    <!-- custom fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/pages.css">
 </head>
+
 <body>
-    <h2>Oops</h2>
-    <p>The page you're looking for does not exist</p>
+
+    <div class="main-flex-container">
+        <header class="header" id="header">
+            <!-- header not animated -->
+            <img src="./images/logo.svg" alt="logo" class="no-animate-head">
+            <div></div>
+
+        </header>
+
+        <h2>Oops</h2>
+        <p class="main-item-1">The page you're looking for does not exist</p>
+
+    </div>
+
+    <!-- mobile menu -->
+    <div class="menu-container">
+        <div class="dropdown">
+            <div class="dropbtn">
+                <div class="closed-menu">
+                    <img src="./images/favicon-logo.svg" id="menu-icon" class="lk-icon">
+                    <button class="menu-button"><img src="./images/mobile-menu.svg" id="menu-icon" alt="menu"></button>
+                </div>
+            </div>
+            <div class="dropdown-content">
+                <br>
+                <br>
+                <a href="./about.html">about</a>
+                <a href="./education.html">education & skills</a>
+                <a href="./experience.html">experience</a>
+                <a href="./projects.html">projects</a>
+                <a href="./index.html">home</a>
+                <button class="close-btn"><img src="./images/cross-svgrepo-com.svg" id="menu-icon" alt="close"></button>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <!-- LK icon desktop -->
+    <div class="lk-desktop-only">
+        <div><a href="./index.html"><img src="./images/favicon-logo.svg" id="menu-icon" class="lk-icon-desktop"></a>
+        </div>
+    </div>
+
+    <footer />
+
 </body>
+
 </html>
