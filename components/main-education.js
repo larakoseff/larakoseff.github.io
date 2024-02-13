@@ -5,7 +5,7 @@ export class MainEducation extends HTMLElement {
 
     connectedCallback() {
 
-        if (window.location.pathname.includes("education.html")) {
+        if (window.location.pathname.includes("education")) {
             this.innerHTML = `
             <main class="main-education">
         <section class="main-flex-container">
