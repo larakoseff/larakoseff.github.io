@@ -311,6 +311,26 @@ textarea {
   padding: 0.5vw;
 }
 
+/* menu animation code */
+
+@keyframes divcolor {
+  0% {
+    background-color: #fde9ff;
+  }
+  25% {
+    background-color: #7600ff;
+  }
+  50% {
+    background-color: #49fce3;
+  }
+  75% {
+    background-color: #fcf202;
+  }
+  100% {
+    background-color: #ff0000;
+  }
+}
+
 .form-btn {
   height: 2.5rem;
   width: 15vw;
