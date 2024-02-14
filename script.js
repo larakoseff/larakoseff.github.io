@@ -4,6 +4,7 @@ import './components/main-about.js'
 import './components/main-education.js'
 import './components/main-projects.js'
 import './components/main-experience.js'
+// import './src/index.js'
 // import './components/main-oops.js'
 
 
