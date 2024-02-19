@@ -56,6 +56,7 @@ export class MainEducation extends HTMLElement {
                     <li>Budget Management</li>
                     <li>Inventory Management</li>
                     <li>Artwork production</li>
+                    <li>Video Editing, Post-production and Installation</li>
                     <li>Fundraising</li>
                     <li>Communications & PR</li>
                     <li>Archiving</li>
