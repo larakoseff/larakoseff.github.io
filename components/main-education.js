@@ -56,14 +56,15 @@ export class MainEducation extends HTMLElement {
                     <li>Budget Management</li>
                     <li>Inventory Management</li>
                     <li>Artwork production</li>
-                    <li>Video Editing, Post-production and Installation</li>
+                    <li>Video Editing & Post-production</li>
+                    <li>Video Synchronisation & Installation</li>
                     <li>Fundraising</li>
                     <li>Communications & PR</li>
                     <li>Archiving</li>
                     <li>Sales</li>
                     <li>Design (digital, print & product) & Branding</li>
                     <li>2D Animation</li>
-                    <li>3D Modeling</li>
+                    <li>3D Modelling</li>
                     <li>Content creation (copy & creative)</li>
                     <li>Web development, design, UI/UX & SEO</li>
                 </ul>
