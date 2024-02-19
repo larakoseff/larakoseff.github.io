@@ -52,6 +52,7 @@ export class MainEducation extends HTMLElement {
                     <li>Event Management</li>
                     <li>Research</li>
                     <li>Writing & Editing</li>
+                    <li>Public Speaking & Teaching</li>
                     <li>Artist Management</li>
                     <li>Budget Management</li>
                     <li>Inventory Management</li>
