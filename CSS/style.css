@@ -161,6 +161,7 @@ a:active {
   bottom: 40px;
   left: 1rem;
   align-items: center;
+  z-index: -1;
 }
 
 .statement-flex {
@@ -217,6 +218,7 @@ a:active {
   position: fixed;
   bottom: 50px;
   right: 30px;
+  z-index: -4;
 
   /* circle 2 animation */
   animation-name: circle-translate-2;
@@ -243,6 +245,7 @@ a:active {
   position: fixed;
   bottom: 80px;
   right: 60px;
+  z-index: -3;
 
   /*circle animation 3 */
   animation-name: circle-translate-1;
@@ -270,7 +273,7 @@ a:active {
   position: fixed;
   bottom: 50px;
   right: 80px;
-  z-index: 1;
+  z-index: -2;
 }
 
 /* CSS trick to make perfect responsive circle */
@@ -382,7 +385,7 @@ a:active {
     background-color: #fde9ff;
     min-width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    z-index: 2;
     margin: 0;
   }
 
@@ -497,7 +500,7 @@ a:active {
     position: fixed;
     bottom: 40px;
     right: 50px;
-    z-index: 1;
+    z-index: -1;
   }
 
   .circle-text {
@@ -581,7 +584,7 @@ a:active {
     background-color: #fde9ff;
     min-width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    z-index: 2;
     margin: 0;
   }
 
