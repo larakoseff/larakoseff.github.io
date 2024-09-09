@@ -94,7 +94,6 @@ header {
   }
 }
 
-
 .flex-container {
   display: flex;
   flex-direction: row;
@@ -149,15 +148,15 @@ a:active {
   background-color: #7600ff;
   color: azure;
   font-family: "Chakra Petch", sans-serif;
+  font-size: 13px;
   width: 65vw;
   border-radius: 30px;
-  height: 6vh;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   margin-left: 1.5rem;
   border-radius: 20px;
-  padding-bottom: 5.5%;
-  padding-top: 3%;
-  padding-left: 5%;
-  padding-right: 2%;
   position: fixed;
   bottom: 40px;
   left: 1rem;
@@ -169,17 +168,20 @@ a:active {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  gap: 20px;
 }
 
-.statement-flex > div {
+/* .statement-flex > div {
   margin-right: 2%;
-}
+} */
 
 .learn-more {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 12vw;
   border: solid white 1px;
   border-radius: 30px;
-  width: 15vw;
-  height: 5vh;
   line-height: 5vh;
   text-align: center;
   font-family: "Inter", sans-serif;
@@ -187,7 +189,7 @@ a:active {
   font-size: 13px;
   letter-spacing: 0.1em;
   padding-left: 5%;
-  padding-right: 2%;
+  padding-right: 5%;
 }
 
 .learn-more:hover {
@@ -202,7 +204,6 @@ a:active {
 .lm-arrow {
   padding-left: 15%;
 }
-
 
 /* ----contact circles-----*/
 
@@ -310,12 +311,9 @@ a:active {
   }
 }
 
-
-
 /* -------Mobile View---------*/
 
 @media all and (max-width: 600px) {
-
   .lk-desktop-only {
     display: none;
   }
@@ -324,7 +322,6 @@ a:active {
     display: none;
   }
 
- 
   .dropbtn {
     background-color: #fde9ff;
     color: rgb(0, 0, 0);
@@ -423,16 +420,13 @@ a:active {
   }
 
   .statement {
+    border-radius: 10px;
     font-size: small;
     width: 40vw;
-    height: 25vh;
-    margin-left: 1rem;
-    border-radius: 20px;
-    padding-bottom: 5.5%;
-    padding-top: 3%;
-    padding-left: 5%;
-    padding-right: 3%;
-    z-index: -1;
+    padding-top: 0;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .statement-flex {
@@ -447,12 +441,12 @@ a:active {
   }
 
   .learn-more {
-    width: 25vw;
-    height: 5vh;
-    line-height: 5vh;
+    width: 30vw;
+    height: 4.5vh;
+    line-height: 4.5vh;
     text-align: center;
     font-weight: 300;
-    font-size: 2vw;
+    font-size: 2.8vw;
     letter-spacing: 0.1em;
     padding-left: 5%;
     padding-right: 2%;
@@ -514,7 +508,6 @@ a:active {
     text-align: center;
     letter-spacing: 0.1em;
   }
-
 }
 
 /* -------Large Mobile/Small Tablet View---------*/
@@ -627,20 +620,12 @@ a:active {
 
   .statement {
     font-size: small;
-    width: 40vw;
-    border-radius: 30px;
-    height: 15vh;
-    margin-left: 1rem;
-    border-radius: 20px;
-    padding-bottom: 6%;
-    padding-top: 3%;
-    padding-left: 5%;
-    padding-right: 3%;
-    position: fixed;
-    bottom: 40px;
-    left: 1rem;
-    align-items: center;
-    z-index: -1;
+    width: 50vw;
+  }
+
+  .statement-flex {
+    flex-direction: column;
+    align-items: start;
   }
 
   .statement-flex > div {
@@ -648,13 +633,9 @@ a:active {
   }
 
   .learn-more {
-    width: 60vw;
-    height: 5vh;
-    line-height: 5vh;
-    font-size: 1.5vw;
-    letter-spacing: 0.1em;
-    padding-left: 5%;
-    padding-right: 2%;
+    width: 20vw;
+    height: 4vh;
+    line-height: 4vh;
   }
 
   .arrow {
@@ -662,9 +643,9 @@ a:active {
     padding-left: 2%;
   }
 
-   /* ----contact circles-----*/
+  /* ----contact circles-----*/
 
-   .circle-2 {
+  .circle-2 {
     width: 15%;
   }
 
@@ -683,7 +664,6 @@ a:active {
   .circle-text {
     font-size: 2.5vw;
   }
-
 }
 
 /* -------Large Tablet View---------*/
@@ -722,7 +702,7 @@ a:active {
   }
 
   .learn-more {
-    width: 35vw;
+    width: 18vw;
   }
 }
 
@@ -769,7 +749,6 @@ a:active {
 /* -------Small Landscape View---------*/
 
 @media all and (min-width: 400px) and (max-height: 500px) {
-
   .statement {
     display: none;
   }
