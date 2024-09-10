@@ -1,22 +1,18 @@
 export class MainAbout extends HTMLElement {
-    constructor() {
-        super();
-    }
+  constructor() {
+    super();
+  }
 
-    connectedCallback() {
-
-        if (window.location.pathname.includes("about")) {
-            this.innerHTML = `
+  connectedCallback() {
+    if (window.location.pathname.includes("about")) {
+      this.innerHTML = `
          <main class="main-about">
         <section class="main-flex-container">
             <div class="main-item-1" id="about">
                 about me <img src="./images/about-icon.svg" alt="about" class="about-icon">
             </div>
             <div class="main-item-2" id="about">
-                <p>I'm a versatile creative, writer and developer interested in art,
-                    data and programming. My skill set is highly diverse, ranging from project management, research and
-                    curating to writing, editing, design and communications, and more recently: coding and web
-                    development.</p>
+                <p>I'm a versatile creative, writer and developer interested in the intersection of art, culture, data and tech. My skill set is highly diverse, ranging from project management, research and curating to writing, editing, design and communications, and more recently: coding, frontend web development, as well as UI/UX engineering.</p>
                 <p>
                     I have over 15 years of experience working in the cultural
                     sector, for galleries, publishing companies and museums. In 2020
@@ -68,9 +64,8 @@ export class MainAbout extends HTMLElement {
             <aside>
             </main>
         `;
-        }
     }
+  }
 }
 
-
-customElements.define('main-about', MainAbout);
+customElements.define("main-about", MainAbout);
