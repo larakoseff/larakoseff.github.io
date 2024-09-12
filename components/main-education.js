@@ -1,12 +1,11 @@
 export class MainEducation extends HTMLElement {
-    constructor() {
-        super();
-    }
+  constructor() {
+    super();
+  }
 
-    connectedCallback() {
-
-        if (window.location.pathname.includes("education")) {
-            this.innerHTML = `
+  connectedCallback() {
+    if (window.location.pathname.includes("education")) {
+      this.innerHTML = `
             <main class="main-education">
         <section class="main-flex-container">
             <div class="main-item-1" id="education">
@@ -37,13 +36,15 @@ export class MainEducation extends HTMLElement {
                 </ul>
                 <h3>Computer Skills</h3>
                 <ul>
-                    <li>Adobe Creative Cloud: Photoshop, Illustrator, InDesign, Premiere Pro, Animate (advanced)</li>
-                    <li>Microsoft Office: Microsoft Word, PowerPoint, Excel (advanced)</li>
-                    <li>3D modeling: SketchUp (intermediate)</li>
-                    <li>UI/UX: Figma, Adobe Xd (some experience)</li>
-                    <li>Website builders: Wordpress, Cargo (advanced)</li>
-                    <li>Frontend Development: React.js, JavaScript, HTML, CSS,
-                        Git, Github, various JS libraries (entry-level)</li>
+                    <li>Adobe Creative Cloud: Photoshop, Illustrator, InDesign, Premiere Pro, Animate</li>
+                    <li>Microsoft Office: Microsoft Word, PowerPoint, Excel</li>
+                    <li>3D modeling: SketchUp</li>
+                    <li>UI/UX: Figma, Adobe Xd</li>
+                    <li>Website builders: Wordpress, Cargo, Shopify</li>
+                    <li>Frontend Development: React, JavaScript, HTML, CSS,
+                        Git, Github, various JS libraries</li>
+                    <li>Email platforms: Mailchimp</li>
+<li>SEO: Yoast, Google Analytics & Ads</li>
                 </ul>
                 <h3>General Skills</h3>
                 <ul>
@@ -89,9 +90,8 @@ export class MainEducation extends HTMLElement {
             <aside>
     </main>
         `;
-        }
     }
+  }
 }
 
-
-customElements.define('main-education', MainEducation);
+customElements.define("main-education", MainEducation);

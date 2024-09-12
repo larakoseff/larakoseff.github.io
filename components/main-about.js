@@ -12,7 +12,8 @@ export class MainAbout extends HTMLElement {
                 about me <img src="./images/about-icon.svg" alt="about" class="about-icon">
             </div>
             <div class="main-item-2" id="about">
-                <p>I'm a versatile creative, writer and developer interested in the intersection of art, culture, data and tech. My skill set is highly diverse, ranging from project management, research and curating to writing, editing, design and communications, and more recently: coding, frontend web development, as well as UI/UX engineering.</p>
+                <p>I'm a versatile creative, writer and developer interested in the intersection of art, culture, data and tech. 
+                My skill set is diverse, ranging from project management, research, and curating to writing, editing, design, and communications. More recently, I have expanded my expertise to include coding, frontend web development, and UI/UX engineering, with a particular focus on the JavaScript library, React.</p>
                 <p>
                     I have over 15 years of experience working in the cultural
                     sector, for galleries, publishing companies and museums. In 2020
