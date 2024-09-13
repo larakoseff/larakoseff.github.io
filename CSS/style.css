@@ -50,14 +50,15 @@ header {
 /* straight across menu */
 .menu {
   font-family: "Inter", sans-serif;
+  font-size: 14px;
   color: #000000;
   font-weight: 300;
   letter-spacing: 0.1em;
   background-color: #fde9ff;
   width: 100vw;
-  height: 7vh;
+  height: 4rem;
   justify-content: center;
-  line-height: 7vh;
+  line-height: 4rem;
 }
 
 #menu:hover {
@@ -69,7 +70,7 @@ header {
 }
 .menu-icons {
   width: auto;
-  height: 4vh;
+  height: 20px;
   vertical-align: middle;
   display: inline-block;
 }
@@ -724,10 +725,10 @@ a:active {
 /* -------Landscape View---------*/
 
 @media all and (min-width: 800px) and (max-height: 600px) {
-  .menu {
+  /* .menu {
     height: 12vh;
     line-height: 12vh;
-  }
+  } */
 
   .statement {
     display: none;
@@ -746,6 +747,11 @@ a:active {
 
   .learn-more {
     display: none;
+  }
+
+  #menu-icon {
+    width: 10vh;
+    padding: 12px;
   }
 }
 
