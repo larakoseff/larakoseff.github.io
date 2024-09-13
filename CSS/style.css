@@ -181,7 +181,7 @@ a:active {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  width: 12vw;
+  width: 11vw;
   border: solid white 1px;
   border-radius: 30px;
   line-height: 5vh;
@@ -706,7 +706,9 @@ a:active {
   }
 
   .learn-more {
-    width: 18vw;
+    width: 15vw;
+    height: 4.5vh;
+    line-height: 4.5vh;
   }
 }
 
