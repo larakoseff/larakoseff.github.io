@@ -16,7 +16,7 @@ export class MainProjects extends HTMLElement {
                 In 2018 I embarked on an independent career and built various platforms, both online and offline,
                 that supported independent and emergent practice, including <a
                     href="https://bubblegumclub.co.za/art/offsetculture-art-launches-poster-series-pictorial-nerve/"
-                    target="_blank">offset culture</a> and the <a href="https://underlineprojects.art/"
+                    target="_blank">offset culture</a> and the <a href="https://underlineshow.co.za/"
                     target="_blank">UNDERLINE show</a>, which was received to much acclaim and led to myself and
                 co-founder Londi Modiko to being featured on the <a
                     href="https://www.apollo-magazine.com/lara-koseff-and-londi-modiko-apollo-40-under-40-africa-the-business/"
@@ -38,31 +38,34 @@ export class MainProjects extends HTMLElement {
                         src="./images/ditiro-mashigo.jpg" alt="project image" class="project-image"></a></div>
 
             <div class="main-item-2" id="projects">
-                <h3>Web & coding projects</h3>
-                I completed a 6-month Software Development
+                <h3>Product Design, Web & Coding projects</h3>
+                I completed a 6-month Frontend Development
                 bootcamp in 2023 at <a href="https://www.codespace.co.za/" target="_blank">CodeSpace</a>, and am
-                currently deepening my skills in <a href="https://react.dev/" target="_blank>">React</a>
+                currently deepening my skills in UI/UX engineering, 2D motion design, as well as <a href="https://react.dev/" target="_blank>">React</a>
                 and exploring libraries such as <a href="https://d3js.org/" target="_blank">D3.js</a> and <a
                     href="https://p5js.org/" target="_blank">p5.js</a>. As part of the bootcamp, we started with the
                 basics, creating games and animations in <a href="https://scratch.mit.edu/projects/861818624/"
-                    target="_blank"> Scratch</a>, a coding community and language designed for children. We then built
-                our own digital resumes (what you're currently browsing, with some upgrades), as well as deep diving
-                into JavaScript (involving much debugging) and eventually built our <a
-                    href="https://subtle-croissant-aa7f9d.netlify.app/" target="_blank">own podcast sites </a>using
-                React and loading data from an API. Prior to learning how to code, I used website builders
-                such as WordPress and Cargo to create sites for my own initiatives such as <a
-                    href="https://underlineprojects.art/" target="_blank">UNDERLINE projects</a> and <a
+                    target="_blank"> Scratch</a>, a coding community and language designed for children. We then learnt wire-framing, HTML and CSS, as well as deep diving
+                into JavaScript and touching on React. Since completing the bootcamp, I have managed product design and front-end development projects including a brand merger and website redesign for <a href="https://somethinggoodstudio.com/" target="_blank>">Something Good Studio</a>, as well as taking on an ambitious custom data visualisation project called <a href="https://tinyletters.github.io/#/" target="blank">tiny letter for mothers</a>. Prior to this, I used website builders
+                such as WordPress and Cargo to design and create sites for my own initiatives such as <a
+                    href="https://underlineshow.co.za/" target="_blank">UNDERLINE projects</a> and <a
                     href="https://incca.org.za/" target="_blank">INCCA</a>, as well as for others, including <a
                     href="https://panicplatform.net/" target="_blank">Pan African Network of Independent
                     Contemporaneity</a> and <a href="https://macrobioticeating.co.za/" target="_blank">Macrobiotic
-                    Eating</a>.
+                    Eating</a>. In addition I managed the online presence, as well as the digital maintenance and evolution for <a href="http://www.goodman-gallery.com" target="_blank">Goodman Gallery</a>, and eventually their <a href="https://south-south.art/" target="_blank">SOUTH SOUTH</a> project over the course of almost a decade.   
+            </div>
+            <div>
+                <a href="https://tinyletters.github.io/" target="_blank">
+                    <video src="./images/tiny-letters.mp4" autoplay loop class="project-image">
+                        This browser does not support HTML video.
+                    </video></a>
             </div>
             <div class="scratch-frame"><iframe src="https://scratch.mit.edu/projects/861818624/embed"
                     allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen
                     class="project-image"></iframe></div>
             </div>
             <div>
-                <a href="https://underlineprojects.art/" target="_blank">
+                <a href="https://underlineshow.co.za/" target="_blank">
                     <video src="./images/underline.mp4" autoplay loop class="project-image">
                         This browser does not support HTML video.
                     </video></a>
@@ -106,7 +109,7 @@ export class MainProjects extends HTMLElement {
             <div><a href="https://south-south.art/veza-new-media-focus/" target="_blank"><img
                         src="./images/project-image-1.jpg" alt="SOUTH SOUTH" class="project-image"></a></div>
             <div class="main-item-2" id="projects">
-                <h3>Product design</h3>
+                <h3>Visual Art Merchandise Design</h3>
                 Since 2018 I have worked with <a href="http://www.goodman-gallery.com" target="_blank">Goodman
                     Gallery</a> on a project basis as the production manager for a range of products including <a
                     href="https://shop-goodman-gallery.com/collections/bags" target="_blank">tote
@@ -116,7 +119,7 @@ export class MainProjects extends HTMLElement {
                     href="https://www.somethinggoodstudio.com/" target="_blank">Something Good Studio</a> to raise funds
                 for charities
                 such as the Witkoppen Health and
-                Welfare Clinic. These products have featured the work of artists such as Ghada Amer & Reza Farkhondeh,
+                Welfare Clinic. These products have featured the work of artists such as William Kentridge, Ghada Amer & Reza Farkhondeh,
                 Cassi Nomada, Nolan Oswald Dennis, and Hank Willis Thomas, amongst others.
             </div>
             <div><a href="https://shop-goodman-gallery.com/collections/bags" target="_blank"><img
