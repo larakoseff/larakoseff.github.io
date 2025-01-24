@@ -31,7 +31,7 @@ export class MainProjects extends HTMLElement {
                 2019. In 2020, with Modiko and
                 Nthabiseng Mokoena, I co-founded <a href="https://incca.org.za/" target="_blank">INCCA (Independent
                     Network for Contemporary Culture & Art)</a>, a non-profit company that aims to foster
-                independent cultural practice. I continue to work on INCCA projects and offer content, digital
+                independent cultural practice. I continue to work on INCCA projects and offer design, content, digital
                 communication and project management for the platform on an ongoing basis.
             </div>
             <div><a href="https://incca.org.za/Feature-The-fibre-art-of-Ditiro-Mashigo" target="_blank"><img
@@ -46,7 +46,7 @@ export class MainProjects extends HTMLElement {
                     href="https://p5js.org/" target="_blank">p5.js</a>. As part of the bootcamp, we started with the
                 basics, creating games and animations in <a href="https://scratch.mit.edu/projects/861818624/"
                     target="_blank"> Scratch</a>, a coding community and language designed for children. We then learnt wire-framing, HTML and CSS, as well as deep diving
-                into JavaScript and touching on React. Since completing the bootcamp, I have managed product design and front-end development projects including a brand merger and website redesign for <a href="https://somethinggoodstudio.com/" target="_blank>">Something Good Studio</a>, as well as taking on an ambitious custom data visualisation project called <a href="https://tinyletters.github.io/#/" target="blank">tiny letter for mothers</a>. Prior to this, I used website builders
+                into JavaScript and touching on React. Since completing the bootcamp, I have managed product design and front-end development projects including a brand merger and website redesign for <a href="https://somethinggoodstudio.com/" target="_blank>">Something Good Studio</a>, as well as taking on an ambitious custom data visualisation project called <a href="https://tinyletters.github.io/#/" target="blank">tiny letters for mothers</a>. Prior to this, I used website builders
                 such as WordPress and Cargo to design and create sites for my own initiatives such as <a
                     href="https://underlineshow.co.za/" target="_blank">UNDERLINE projects</a> and <a
                     href="https://incca.org.za/" target="_blank">INCCA</a>, as well as for others, including <a
