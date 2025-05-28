@@ -12,38 +12,16 @@ export class MainAbout extends HTMLElement {
                 about me <img src="./images/about-icon.svg" alt="about" class="about-icon">
             </div>
             <div class="main-item-2" id="about">
-                <p>I'm a versatile creative, writer and developer interested in the intersection of art, culture, data and tech. 
-                My skill set is diverse, ranging from project management, research, and curating to writing, editing, design, and communications. More recently, I have expanded my expertise to include coding, frontend web development, and UI/UX engineering, with a particular focus on the JavaScript library, React.</p>
-                <p>
-                    I have over 15 years of experience working in the cultural
-                    sector, for galleries, publishing companies and museums. In 2020
-                    I co-founded <a href="https://incca.org.za/" target="_blank">INCCA (Independent Network for
-                        Contemporary Culture
-                        & Art)</a> with Londi Modiko and Nthabiseng Mokoena, a non-profit
-                    company that aims to foster independent cultural practice. INCCA
-                    grew out of numerous projects supporting independent creatives,
-                    including the <a href="https://underlineprojects.art/" target="_blank">UNDERLINE show</a> in 2019.
-                    From 2010-2018, I worked at <a href="http://www.goodman-gallery.com" target="_blank">Goodman
-                        Gallery</a>
-                    Johannesburg, primarily in a curatorial, communications and editorial capacity and as a liaison for
-                    over 15 artists. I was part
-                    of the core team who established and managed SOUTH SOUTH, a
-                    curatorial project that evolved into a collaborative platform in
-                    2020. I most recently worked on the platform as a project
-                    coordinator.
-                </p>
-                <p>
-                    I decided to explore coding after my experience of
-                    working on numerous online platforms leading up to and during
-                    COVID lockdown. During this time I developed a deep interest in
-                    data visualisation and analytics, which was heavily influenced
-                    by my discovery of Italian information designer <a href="https://giorgialupi.com/"
-                        target="_blank">Giorgia Lupi</a> and her concept of "data humanism". Building
-                    on this interest, I completed a 6-month Software Development
-                    bootcamp in 2023, and am currently deepening my skills in React
-                    and exploring libraries such as D3.js and p5.js.
+            <p>I am an arts professional and multidisciplinary creative with over 15 years of experience in the cultural sector, based in Johannesburg, South Africa. My career spans curating, project management, design, research, writing, editing, communications, and more recently, software development focused on  UI/UX design and frontend web technologies like React.</p>
 
-                </p>
+<p>In 2020, I co-founded <a href="https://incca.org.za/" target="_blank" rel="noopener noreferrer">INCCA (Independent Network for Contemporary Culture & Art)</a>, a non-profit organisation dedicated to fostering independent cultural practice through exhibitions, research, and digital innovation. As a founding director, I provide ongoing fundraising and project management, and I also work as an art liaison offering digital solutions for artists, cultural archives, and small creative businesses, helping organise and share contemporary creative practices.</p>
+
+<p>Throughout my career, I have collaborated with artists, curators, and cultural institutions across South Africa, Brazil, Argentina, Portugal, and beyond. I have edited and contributed to numerous publications on art, written regularly for the Sunday Times South Africa, and presented research on the art market and cultural economics at international forums such as Christie’s Symposium on Women Art Dealers and the College Art Association’s Annual Conference in New York. My academic work has been published in journals and books including <em>Critical Interventions: Journal of African Art History and Visual Culture</em> and <em>Women Art Dealers: Creating Markets for Modern Art, 1940–1990</em>.</p>
+
+<p>I have been instrumental in building platforms that support independent and emergent practices, such as the UNDERLINE show at the Museum of African Design in Johannesburg. Before INCCA, I spent eight years at <a href="http://www.goodman-gallery.com" target="_blank" rel="noopener noreferrer">Goodman Gallery Johannesburg</a>, where I held various roles including writer, designer, archivist, press officer, and senior curator. I managed exhibitions, artists, and international art fairs (Paris, New York, London, São Paulo) and was part of the core team that created SOUTH SOUTH, a curatorial project exploring connections across the Global South, which evolved into a collaborative platform. I worked on the SOUTH SOUTH platform until the end of 2022.</p>
+
+<p>My interest in coding and data visualisation grew during the COVID lockdown, inspired by Italian information designer <a href="https://giorgialupi.com/" target="_blank" rel="noopener noreferrer">Giorgia Lupi</a> and her concept of "data humanism." I completed a 6-month Software Development course in 2023 and continue to deepen my skills in React, D3.js, and p5.js. I currently apply these skills in creative research projects integrating data visualisation and storytelling, including a project called <a href="https://tinyletters.github.io/" target="_blank" rel="noopener noreferrer">tiny letters for mothers</a>. Additionally, as an art liaison, I use my coding skills to create custom digital archives for artists and cultural organisations.</p>
+
             </div>
         </section>
         <!-- about page menu -->
