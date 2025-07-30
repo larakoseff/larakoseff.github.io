@@ -89,3 +89,80 @@ font-weight: 300;
 .footer-icon-hover:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
+/* Tablet and below (≤768px) */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    letter-spacing: 0.05ch;
+  }
+
+  .row {
+    height: 2rem;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    padding: 1.5rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+}
+
+/* Large phones (≤600px) */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  .icon {
+    width: 35px;
+    height: 35px;
+    padding: 1rem;
+  }
+
+  .footer-icon {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Typical mobile (≤480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .icon {
+    width: 30px;
+    height: 30px;
+    padding: 0.75rem;
+  }
+
+  .footer {
+    padding: 1.5rem;
+  }
+}
+
+/* Very small phones (≤360px) */
+@media (max-width: 360px) {
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  .icon {
+    width: 28px;
+    height: 28px;
+    padding: 0.5rem;
+  }
+
+  .footer-icon {
+    width: 22px;
+    height: 22px;
+  }
+}
