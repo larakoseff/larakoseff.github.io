@@ -1,5 +1,5 @@
 import { useState } from "react";
-import LKLogo from "/favicon-logo.png";
+import TooltipWithMorph from "./TooltipWithMorph";
 import "./index.css";
 
 function App() {
@@ -8,7 +8,8 @@ function App() {
       <div className="wrapper">
         <main className="container">
           <header className="row">
-            <img src="/assets/eye.svg" className="icon" alt="eye" />
+            {/* <img src="/assets/eye.svg" className="icon" alt="eye" /> */}
+            <TooltipWithMorph />
             <h1>Lara Koseff</h1>
             <img src="/assets/contrast.svg"  className="icon" alt="contrast toggle" />
           </header>

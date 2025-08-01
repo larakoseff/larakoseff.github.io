@@ -1,0 +1,27 @@
+.icon-wrapper {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .icon {
+    width: 40px;
+    cursor: pointer;
+  }
+  
+  .fullscreen-svg {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+  }
+  
+  .tooltip-blob {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 999;
+  }
+
+  
