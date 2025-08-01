@@ -1,42 +1,43 @@
 /* Theme 1: Default */
 .theme-1 {
-  --bg: #EDEDE9;
+  --bg: #edede9;
   --fg: #252422;
 }
 
 /* Theme 2 */
 .theme-2 {
-  --bg: #3A5A40;
-  --fg: #FFD6FF;
+  --bg: #3a5a40;
+  --fg: #ffd6ff;
 }
 
 /* Theme 3 */
 .theme-3 {
-  --bg: #B9FBC0;
-  --fg: #E5383B;
+  --bg: #b9fbc0;
+  --fg: #e5383b;
 }
 
 /* Theme 4 */
 .theme-4 {
-  --bg: #FFCA3A;
-  --fg: #4A3FDB;
+  --bg: #ffca3a;
+  --fg: #4a3fdb;
 }
 
 /* Theme 5 */
 .theme-5 {
-  --bg: #1C3738;
-  --fg: #00FFD8;
+  --bg: #1c3738;
+  --fg: #00ffd8;
 }
 
 /* Apply theme */
 .wrapper {
   background-color: var(--bg);
   color: var(--fg);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 /* hr and icons inherit current color */
-
 
 /* inline svg, icons */
 /* .icon path,
@@ -48,14 +49,16 @@
 .footer {
   background-color: var(--fg);
   color: var(--bg);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
-
 @font-face {
-  font-family: 'TT Commons Pro';
-  src: url('/fonts/TT_Commons_Pro_Medium.woff2') format('woff2'),
-       url('/fonts/TT_Commons_Pro_Medium.woff') format('woff');
+  font-family: "TT Commons Pro";
+  src:
+    url("/fonts/TT_Commons_Pro_Medium.woff2") format("woff2"),
+    url("/fonts/TT_Commons_Pro_Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -69,19 +72,22 @@ a:active {
 }
 
 header {
-  padding-top:0;
+  padding-top: 0;
 }
 
 body {
   margin: 0;
-  font-family: 'TT Commons Pro', sans-serif;
-  background-color: #EDEDE9;
+  font-family: "TT Commons Pro", sans-serif;
+  background-color: #edede9;
   color: #252422;
   padding: 0;
   height: 100%;
 }
 
 .wrapper {
+  background-color: var(--bg);
+  color: var(--fg); /* THIS ensures currentColor works */
+  transition: background-color 0.3s ease, color 0.3s ease;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -94,12 +100,12 @@ body {
 }
 
 .divider {
+  color: inherit; /* ensures currentColor reflects the parent */
   position: relative;
   border: none;
   margin: 0;
- border-top: 2.5px solid currentColor;
-  }
-
+  border-top: 2.5px solid currentColor;
+}
 
 .row {
   display: flex;
@@ -117,15 +123,15 @@ h1 {
 }
 
 footer {
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-between;
-background: #252422;
-color: white;
-padding: 2rem;
-letter-spacing: 0.05ch;
-font-weight: 300;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: #252422;
+  color: white;
+  padding: 2rem;
+  letter-spacing: 0.05ch;
+  font-weight: 300;
 }
 
 .icon {
