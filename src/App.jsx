@@ -1,62 +1,97 @@
 import { useState } from "react";
 import TooltipWithMorph from "./TooltipWithMorph";
+import AboutIcon from "./components/icons/AboutIcon";
+import ContrastIcon from "./components/icons/ContrastIcon";
+import EyeIcon from "./components/icons/EyeIcon";
+import GitHubIcon from "./components/icons/GitHubIcon";
+import MailIcon from "./components/icons/MailIcon";
+import LinkedinIcon from "./components/icons/LinkedInIcon";
+import ColophonIcon from "./components/icons/ColophonIcon";
+import ProjectsIcon from "./components/icons/ProjectsIcon";
+import ExperienceIcon from "./components/icons/ExperienceIcon";
+import SkillsIcon from "./components/icons/SkillsIcon";
+import WebIcon from "./components/icons/WebIcon";
 import "./index.css";
 
 function App() {
+  const totalThemes = 5;
+  const [themeIndex, setThemeIndex] = useState(1); // start from 1
+
+  const handleThemeToggle = () => {
+    setThemeIndex((prev) => (prev % totalThemes) + 1);
+  };
+
   return (
-    <>
-      <div className="wrapper">
-        <main className="container">
-          <header className="row">
-            {/* <img src="/assets/eye.svg" className="icon" alt="eye" /> */}
-            <TooltipWithMorph />
-            <h1>Lara Koseff</h1>
-            <img src="/assets/contrast.svg"  className="icon" alt="contrast toggle" />
-          </header>
-          <hr className="divider" />
-          <div className="row"></div>
-          <hr className="divider" />
-          <div className="row"></div>
-          <hr className="divider" />
-          <div className="row">
-            <img src="/assets/about.svg"  className="icon" alt="about" />
-            <div></div>
-            <img src="/assets/projects.svg"  className="icon" alt="projects" />
-          </div>
+    <div className={`wrapper theme-${themeIndex}`}>
+      <main className="container">
+        <header className="row">
+          <TooltipWithMorph tooltipImage="/images/home.jpg">
+            <EyeIcon />
+          </TooltipWithMorph>
+          <h1>Lara Koseff</h1>
+          <ContrastIcon onClick={handleThemeToggle} />
+        </header>
+        <hr className="divider" />
+        <div className="row"></div>
+        <hr className="divider" />
+        <div className="row"></div>
+        <hr className="divider" />
+        <div className="row">
+          <TooltipWithMorph tooltipImage="/images/blah.jpg">
+            <AboutIcon />
+          </TooltipWithMorph>
+          <div></div>
+          <TooltipWithMorph tooltipImage="/images/project-image-1.jpg">
+            <ProjectsIcon />
+          </TooltipWithMorph>
+        </div>
+        <hr className="divider" />
+        <div className="row">
+          <TooltipWithMorph tooltipImage="/images/ditiro.png">
+            <WebIcon />
+          </TooltipWithMorph>
+          <h1>New site coming soon(ish)</h1>
 
-          <hr className="divider" />
+          <TooltipWithMorph tooltipImage="/images/ditiro-exhibition.jpg">
+            <ExperienceIcon />
+          </TooltipWithMorph>
+        </div>
+        <hr className="divider" />
+        <div className="row">
+          <TooltipWithMorph tooltipImage="/images/colophon.jpg">
+            <ColophonIcon />
+          </TooltipWithMorph>
+          <div></div>
+          <TooltipWithMorph tooltipImage="/images/skills.jpg">
+            <SkillsIcon />
+          </TooltipWithMorph>
+        </div>
+        <hr className="divider" />
+        <div className="row"></div>
+        <hr className="divider" />
+        <div className="row"></div>
+      </main>
 
-          <div className="row">
-            <img src="/assets/web.svg" className="icon" alt="web" />
-            <h1>New site coming soon(ish)</h1>
-            <img src="/assets/experience.svg"  className="icon" alt="experience" />
-          </div>
-
-          <hr className="divider" />
-
-          <div className="row">
-            <img src="/assets/colophon.svg"  className="icon" alt="colophon" />
-            <div></div>
-            <img src="/assets/skills.svg"  className="icon" alt="skills" />
-          </div>
-          <hr className="divider" />
-          <div className="row"></div>
-          <hr className="divider" />
-          <div className="row"></div>
-        </main>
-
-        <footer className="footer">
-          <p>
-            Lara Koseff | art liaison | designer | writer | creative developer
-          </p>
-          <div className="footer-icons">
-            <a href="https://github.com/larakoseff" className="footer-icon-hover" target="blank"><img src="/assets/github.svg" className="footer-icon" alt="github" /></a>
-            <a href="mailto:larakoseff@gmail.com"><img src="/assets/mail.svg" className="footer-icon" alt="email" /></a>
-            <a href="https://www.linkedin.com/in/lara-koseff-37a04b7/" target="blank"><img src="/assets/linkedin.svg" className="footer-icon" alt="linkedin" /></a>
-          </div>
-        </footer>
-      </div>
-    </>
+      <footer className="footer">
+        <p>
+          Lara Koseff | art liaison | designer | writer | creative developer
+        </p>
+        <div className="footer-icons">
+          <a href="https://github.com/larakoseff" target="blank">
+            <GitHubIcon />
+          </a>
+          <a href="mailto:larakoseff@gmail.com">
+            <MailIcon />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/lara-koseff-37a04b7/"
+            target="blank"
+          >
+            <LinkedinIcon />
+          </a>
+        </div>
+      </footer>
+    </div>
   );
 }
 
