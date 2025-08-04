@@ -41,7 +41,7 @@ function App() {
         <hr className="divider" />
         <div className="under-row"></div>
 
-        <div className="row">
+        {/* <div className="row">
           <TooltipWithMorph tooltipImage="/images/blah.jpg">
             <AboutIcon />
           </TooltipWithMorph>
@@ -256,11 +256,11 @@ function App() {
             <p>This is the colophon content.</p>
           </div>
           <hr className="divider" />
-        </div>
+        </div> */}
 
         {/* Under construction  */}
 
-        {/* <div className="row"></div>
+        <div className="row"></div>
         <hr className="divider" />
         <div className="row"></div>
         <hr className="divider" />
@@ -297,7 +297,7 @@ function App() {
         <hr className="divider" />
         <div className="row"></div>
         <hr className="divider" />
-        <div className="row"></div> */}
+        <div className="row"></div>
       </main>
 
       <footer className="footer">
