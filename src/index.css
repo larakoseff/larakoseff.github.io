@@ -81,13 +81,18 @@ body {
   background-color: #edede9;
   color: #252422;
   padding: 0;
+}
+
+.main {
   height: 100%;
 }
 
 .wrapper {
   background-color: var(--bg);
   color: var(--fg); /* THIS ensures currentColor works */
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -109,7 +114,7 @@ body {
 
 .row {
   display: flex;
-  height: 7vh;
+  height: 8vh;
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 0;
@@ -158,6 +163,55 @@ footer {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 
+.under-row {
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.about-content {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  padding: 2rem;
+  column-count: 2;
+  column-gap: 2rem;
+  margin: 0;
+}
+
+.under-row .about-content p:first-child {
+  margin-top: 0;
+}
+
+.under-row.slide-down {
+  max-height: none; 
+  opacity: 1;
+}
+
+.under-row.slide-up {
+  max-height: 0;
+  opacity: 0;
+}
+
+.plus-icon-wrapper {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem; 
+  box-sizing: content-box;
+}
+
+.plus-icon {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.plus-icon.rotated {
+  transform: rotate(45deg);
+}
 /* Tablet and below (≤768px) */
 @media (max-width: 768px) {
   h1 {

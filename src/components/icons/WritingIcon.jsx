@@ -1,0 +1,8 @@
+export default function WritingIcon() {
+    return (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 91.602 108.242" className="icon">
+        <path d="M85.922,15.347C76.328-4.927,53.279,5.156,60.613,29.6c3.634,12.11,16.336,21.683,16.145,34.327C76.591,75,65.8,82.787,55.086,82.108c-10.855-.688-17.645-5.291-19.635-16.436-1.608-9,6.991-18.534,14.981-22.98C67.337,33.285,93.926,42.151,96.1,74.4c1.76,26.092-30.235,43.568-60.651,31.271-41.914-16.944-30-66.663-6.981-73.6" transform="translate(-6.074 -2.951)" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" />
+      </svg>
+    );
+  }
+  
