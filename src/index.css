@@ -720,7 +720,7 @@ footer {
   }
 
   h2 {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     letter-spacing: 0.05ch;
   }
 
@@ -756,7 +756,7 @@ footer {
   }
 
   .project-description {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .fade-carousel {
@@ -768,13 +768,19 @@ footer {
     flex: unset;
   }
 
+  .project-card {
+    padding: 1rem;
+  }
+
   .about-content {
     column-count: 1;
-    font-size: 0.8rem;
+    font-size: 1rem;
+    padding: 1rem;
   }
 
   .experience-content {
-    font-size: 0.8rem;
+    font-size: 1rem;
+    padding: 1rem;
   }
 
   .project-summary-row {
