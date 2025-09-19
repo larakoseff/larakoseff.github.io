@@ -3,7 +3,7 @@ export default function ContrastIcon(props) {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 86 86"
-      className="icon"
+      className="contrast-icon"
       {...props}
     >
       <path

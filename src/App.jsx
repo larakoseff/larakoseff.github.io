@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import TooltipWithMorph from "./TooltipWithMorph";
 import AboutIcon from "./components/icons/AboutIcon";
 import ContrastIcon from "./components/icons/ContrastIcon";
@@ -11,14 +11,25 @@ import ProjectsIcon from "./components/icons/ProjectsIcon";
 import ExperienceIcon from "./components/icons/ExperienceIcon";
 import SkillsIcon from "./components/icons/SkillsIcon";
 import WebIcon from "./components/icons/WebIcon";
-import PlusIcon from "./components/icons/PlusIcon";
 import WritingIcon from "./components/icons/WritingIcon";
+import Section from "./components/Section";
+import WebDevSection from "./components/WebDevSection";
+import WritingDesignSection from "./components/WritingDesignSection";
+import CuratingProjectsSection from "./components/CuratingProjectsSection";
+import AboutSection from "./components/AboutSection";
+import ExperienceSection from "./components/ExperienceSection";
+import EducationSection from "./components/EducationSection";
+import ColophonSection from "./components/ColophonSection";
 import "./index.css";
+import projectsData from "./data/projectsData";
 
 function App() {
   const totalThemes = 5;
-  const [themeIndex, setThemeIndex] = useState(1); // start from 1
+  const [themeIndex, setThemeIndex] = useState(1);
   const [activeSection, setActiveSection] = useState(null);
+
+  // Single active filter: { type: 'year'|'tag', value } | null
+  const [filter, setFilter] = useState(null);
 
   const toggleSection = (section) => {
     setActiveSection((prev) => (prev === section ? null : section));
@@ -28,6 +39,96 @@ function App() {
     setThemeIndex((prev) => (prev % totalThemes) + 1);
   };
 
+  // Read filter from URL on load (e.g. ?filter=tag:react or ?filter=year:2025)
+  useEffect(() => {
+    const sp = new URLSearchParams(window.location.search);
+    const raw = sp.get("filter");
+    if (!raw) return;
+    const [type, value] = raw.split(":");
+    if (type === "tag" && value) setFilter({ type: "tag", value });
+    if (type === "year" && value && !Number.isNaN(+value))
+      setFilter({ type: "year", value: +value });
+  }, []);
+
+  // Write filter to URL (shareable)
+  useEffect(() => {
+    const sp = new URLSearchParams(window.location.search);
+    if (filter) sp.set("filter", `${filter.type}:${filter.value}`);
+    else sp.delete("filter");
+    const qs = sp.toString();
+    window.history.replaceState(
+      null,
+      "",
+      qs ? `?${qs}` : window.location.pathname
+    );
+  }, [filter]);
+
+  const handleFilter = (f) => {
+    setActiveSection(null); // collapse any open section when a new filter is applied (optional but nice)
+    setFilter(f);
+  };
+
+  const clearFilter = () => {
+    setFilter(null); // remove filter
+    setActiveSection(null); // collapse any open section
+  };
+
+  // ESC clears filter
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === "Escape") clearFilter();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
+  // Pre-filtered arrays per section
+  const webList = useMemo(() => {
+    const match = (p) => {
+      if (!filter) return true;
+      if (filter.type === "year") return p.year === filter.value;
+      const tag = String(filter.value).toLowerCase();
+      return (
+        Array.isArray(p.tags) &&
+        p.tags.map((t) => t.toLowerCase()).includes(tag)
+      );
+    };
+    return projectsData.filter((p) => p.section === "web").filter(match);
+  }, [filter]);
+
+  const writingList = useMemo(() => {
+    const match = (p) => {
+      if (!filter) return true;
+      if (filter.type === "year") return p.year === filter.value;
+      const tag = String(filter.value).toLowerCase();
+      return (
+        Array.isArray(p.tags) &&
+        p.tags.map((t) => t.toLowerCase()).includes(tag)
+      );
+    };
+    return projectsData.filter((p) => p.section === "writing").filter(match);
+  }, [filter]);
+
+  const curatingList = useMemo(() => {
+    const match = (p) => {
+      if (!filter) return true;
+      if (filter.type === "year") return p.year === filter.value;
+      const tag = String(filter.value).toLowerCase();
+      return (
+        Array.isArray(p.tags) &&
+        p.tags.map((t) => t.toLowerCase()).includes(tag)
+      );
+    };
+    return projectsData.filter((p) => p.section === "curating").filter(match);
+  }, [filter]);
+
+  // Visibility rules
+  const isFiltering = !!filter;
+  const showWeb = !isFiltering || webList.length > 0;
+  const showWriting = !isFiltering || writingList.length > 0;
+  const showCurating = !isFiltering || curatingList.length > 0;
+  const anyProjectVisible = showWeb || showWriting || showCurating;
+
   return (
     <div className={`wrapper theme-${themeIndex}`}>
       <main className="container">
@@ -35,269 +136,152 @@ function App() {
           <TooltipWithMorph tooltipImage="/images/home.jpg">
             <EyeIcon />
           </TooltipWithMorph>
-          <h1>Lara Koseff</h1>
+          <h1 className="name-title">Lara Koseff</h1>
           <ContrastIcon onClick={handleThemeToggle} />
         </header>
-        <hr className="divider" />
-        <div className="under-row"></div>
 
-        {/* <div className="row">
-          <TooltipWithMorph tooltipImage="/images/blah.jpg">
-            <AboutIcon />
-          </TooltipWithMorph>
-          <h1>About me</h1>
-          <div className="plus-icon-wrapper">
-            <PlusIcon
-              className={`plus-icon ${
-                activeSection === "about" ? "rotated" : ""
-              }`}
-              onClick={() => toggleSection("about")}
+        {/* Sticky filter bar */}
+        {isFiltering && (
+          <div className="filter-bar" role="status" aria-live="polite">
+            <span className="filter-label">Filtered by</span>
+            <button className="filter-chip">
+              {String(filter.value)} <span aria-hidden></span>
+            </button>
+            <button className="project-year filter-clear" onClick={clearFilter}>
+              Clear filter
+            </button>
+          </div>
+        )}
+
+        {/* Hide spacer/under-row while filtering */}
+        {!isFiltering && (
+          <>
+            <hr className="divider" />
+            <div className="under-row"></div>
+          </>
+        )}
+
+        {/* Hide these static sections while filtering */}
+        {!isFiltering && (
+          <AboutSection
+            id="about-me"
+            title="About Me"
+            icon={AboutIcon}
+            tooltipImage="/images/multiples.jpg"
+            isActive={activeSection === "about-me"}
+            toggleSection={toggleSection}
+          />
+        )}
+
+        {/* Project sections: only render those with matches */}
+        {showWeb && (
+          <Section
+            id="web"
+            title="Web design + development"
+            icon={WebIcon}
+            tooltipImage="/images/ditiro.png"
+            isActive={activeSection === "web"}
+            toggleSection={toggleSection}
+            activeFilter={filter}
+            onClearFilter={clearFilter}
+          >
+            <WebDevSection
+              projects={webList}
+              activeFilter={filter}
+              onFilter={handleFilter}
+              onClearFilter={clearFilter}
             />
-          </div>
-        </div>
-        <hr className="divider" />
-        <div
-          className={`under-row ${
-            activeSection === "about" ? "slide-down" : "slide-up"
-          }`}
-        >
-          <div className="about-content">
-            <p>
-              I am an arts professional and multidisciplinary creative with over
-              15 years of experience in the cultural sector, based in
-              Johannesburg, South Africa. My work spans curating, project
-              management, design, research, writing, editing, communications,
-              and more recently, software development with a focus on UI/UX and
-              frontend technologies like React. In 2020, I co-founded INCCA
-              (Independent Network for Contemporary Culture & Art), a non-profit
-              organisation supporting independent cultural practice through
-              exhibitions, research, and digital innovation. As a co-founding
-              director, I lead fundraising and project management, and also work
-              as an art liaison, offering digital solutions for artists,
-              archives, and small creative businesses. I have collaborated with
-              artists, curators, and institutions across South Africa, Brazil,
-              Argentina, Portugal, and beyond. I’ve edited and contributed to
-              numerous publications on art, written regularly for the Sunday
-              Times South Africa.
-            </p>
-            <p>
-              I have presented research at international forums including
-              Christie’s Symposium on Women Art Dealers and the College Art
-              Association’s Annual Conference in New York. My academic writing
-              has been published in Critical Interventions: Journal of African
-              Art History and Visual Culture and Women Art Dealers: Creating
-              Markets for Modern Art, 1940–1990. I’ve been instrumental in
-              building platforms for independent and emergent practices,
-              including the UNDERLINE show at the Museum of African Design in
-              Johannesburg. Prior to founding INCCA, I spent eight years at
-              Goodman Gallery Johannesburg, where I held roles including writer,
-              designer, archivist, press officer, and senior curator. I managed
-              exhibitions, artists, and international art fairs (Paris, New
-              York, London, São Paulo) and was part of the team that developed
-              SOUTH SOUTH — a curatorial project connecting the Global South —
-              which evolved into a collaborative platform I worked on until the
-              end of 2022.
-            </p>
-          </div>
-          <hr className="divider" />
-        </div>
+          </Section>
+        )}
 
-        <div className="row">
-          <TooltipWithMorph tooltipImage="/images/blah.jpg">
-            <WebIcon />
-          </TooltipWithMorph>
-          <h1>Web design + development</h1>
-          <div className="plus-icon-wrapper">
-            <PlusIcon
-              className={`plus-icon ${
-                activeSection === "web" ? "rotated" : ""
-              }`}
-              onClick={() => toggleSection("web")}
+        {showWriting && (
+          <Section
+            id="writing"
+            title="Writing + design"
+            icon={WritingIcon}
+            tooltipImage="/images/wad-tooltip.jpg"
+            isActive={activeSection === "writing"}
+            toggleSection={toggleSection}
+            activeFilter={filter}
+            onClearFilter={clearFilter}
+          >
+            <WritingDesignSection
+              projects={writingList}
+              activeFilter={filter}
+              onFilter={handleFilter}
+              onClearFilter={clearFilter}
             />
-          </div>
-        </div>
-        <hr className="divider" />
-        <div
-          className={`under-row ${
-            activeSection === "web" ? "slide-down" : "slide-up"
-          }`}
-        >
-          <div className="about-content">
-            <p>This is the web content.</p>
-          </div>
-          <hr className="divider" />
-        </div>
+          </Section>
+        )}
 
-        <div className="row">
-          <TooltipWithMorph tooltipImage="/images/blah.jpg">
-            <WritingIcon />
-          </TooltipWithMorph>
-          <h1>Writing + design</h1>
-          <div className="plus-icon-wrapper">
-            <PlusIcon
-              className={`plus-icon ${
-                activeSection === "writing" ? "rotated" : ""
-              }`}
-              onClick={() => toggleSection("writing")}
+        {showCurating && (
+          <Section
+            id="curating"
+            title="Curating + projects"
+            icon={ProjectsIcon}
+            tooltipImage="/images/project-image-1.jpg"
+            isActive={activeSection === "curating"}
+            toggleSection={toggleSection}
+            activeFilter={filter}
+            onClearFilter={clearFilter}
+          >
+            <CuratingProjectsSection
+              projects={curatingList}
+              activeFilter={filter}
+              onFilter={handleFilter}
+              onClearFilter={clearFilter}
             />
-          </div>
-        </div>
-        <hr className="divider" />
-        <div
-          className={`under-row ${
-            activeSection === "writing" ? "slide-down" : "slide-up"
-          }`}
-        >
-          <div className="about-content">
-            <p>This is the writing content.</p>
-          </div>
-          <hr className="divider" />
-        </div>
+          </Section>
+        )}
 
-        <div className="row">
-          <TooltipWithMorph tooltipImage="/images/blah.jpg">
-            <ProjectsIcon />
-          </TooltipWithMorph>
-          <h1>Curating + Projects</h1>
-          <div className="plus-icon-wrapper">
-            <PlusIcon
-              className={`plus-icon ${
-                activeSection === "projects" ? "rotated" : ""
-              }`}
-              onClick={() => toggleSection("projects")}
+        {/* When filtering & no project matches */}
+        {isFiltering && !anyProjectVisible && (
+          <>
+            <hr className="divider" />
+            <div className="empty" style={{ padding: "1rem" }}>
+              No projects match this filter.
+              <button
+                className="filter-clear"
+                onClick={clearFilter}
+                style={{ marginLeft: 8 }}
+              >
+                Clear filter
+              </button>
+            </div>
+          </>
+        )}
+
+        {/* Hide these while filtering */}
+        {!isFiltering && (
+          <>
+            <ExperienceSection
+              id="experience"
+              title="Experience"
+              icon={ExperienceIcon}
+              tooltipImage="/images/projects-goodman.gif"
+              isActive={activeSection === "experience"}
+              toggleSection={toggleSection}
             />
-          </div>
-        </div>
-        <hr className="divider" />
-        <div
-          className={`under-row ${
-            activeSection === "projects" ? "slide-down" : "slide-up"
-          }`}
-        >
-          <div className="about-content">
-            <p>This is the curating + projects content.</p>
-          </div>
-          <hr className="divider" />
-        </div>
 
-        <div className="row">
-          <TooltipWithMorph tooltipImage="/images/blah.jpg">
-            <ExperienceIcon />
-          </TooltipWithMorph>
-          <h1>Experience</h1>
-          <div className="plus-icon-wrapper">
-            <PlusIcon
-              className={`plus-icon ${
-                activeSection === "experience" ? "rotated" : ""
-              }`}
-              onClick={() => toggleSection("experience")}
+            <EducationSection
+              id="education"
+              title="Education + skills"
+              icon={SkillsIcon}
+              tooltipImage="/images/education.png"
+              isActive={activeSection === "education"}
+              toggleSection={toggleSection}
             />
-          </div>
-        </div>
-        <hr className="divider" />
-        <div
-          className={`under-row ${
-            activeSection === "experience" ? "slide-down" : "slide-up"
-          }`}
-        >
-          <div className="about-content">
-            <p>This is the experience content.</p>
-          </div>
-          <hr className="divider" />
-        </div>
 
-        <div className="row">
-          <TooltipWithMorph tooltipImage="/images/blah.jpg">
-            <SkillsIcon />
-          </TooltipWithMorph>
-          <h1>Education + skills</h1>
-          <div className="plus-icon-wrapper">
-            <PlusIcon
-              className={`plus-icon ${
-                activeSection === "skills" ? "rotated" : ""
-              }`}
-              onClick={() => toggleSection("skills")}
+            <ColophonSection
+              id="colophon"
+              title="Colophon"
+              icon={ColophonIcon}
+              tooltipImage="/images/street-lamp.jpg"
+              isActive={activeSection === "colophon"}
+              toggleSection={toggleSection}
             />
-          </div>
-        </div>
-        <hr className="divider" />
-        <div
-          className={`under-row ${
-            activeSection === "skills" ? "slide-down" : "slide-up"
-          }`}
-        >
-          <div className="about-content">
-            <p>This is the education + skills content.</p>
-          </div>
-          <hr className="divider" />
-        </div>
-
-         <div className="row">
-          <TooltipWithMorph tooltipImage="/images/blah.jpg">
-            <ColophonIcon />
-          </TooltipWithMorph>
-          <h1>Colophon</h1>
-          <div className="plus-icon-wrapper">
-            <PlusIcon
-              className={`plus-icon ${
-                activeSection === "colophon" ? "rotated" : ""
-              }`}
-              onClick={() => toggleSection("colophon")}
-            />
-          </div>
-        </div>
-        <hr className="divider" />
-        <div
-          className={`under-row ${
-            activeSection === "colophon" ? "slide-down" : "slide-up"
-          }`}
-        >
-          <div className="about-content">
-            <p>This is the colophon content.</p>
-          </div>
-          <hr className="divider" />
-        </div> */}
-
-        {/* Under construction  */}
-
-        <div className="row"></div>
-        <hr className="divider" />
-        <div className="row"></div>
-        <hr className="divider" />
-        <div className="row">
-          <TooltipWithMorph tooltipImage="/images/blah.jpg">
-            <AboutIcon />
-          </TooltipWithMorph>
-          <div></div>
-          <TooltipWithMorph tooltipImage="/images/project-image-1.jpg">
-            <ProjectsIcon />
-          </TooltipWithMorph>
-        </div>
-        <hr className="divider" />
-        <div className="row">
-          <TooltipWithMorph tooltipImage="/images/ditiro.png">
-            <WebIcon />
-          </TooltipWithMorph>
-          <h1>New site coming soon(ish)</h1>
-
-          <TooltipWithMorph tooltipImage="/images/ditiro-exhibition.jpg">
-            <ExperienceIcon />
-          </TooltipWithMorph>
-        </div>
-        <hr className="divider" />
-        <div className="row">
-          <TooltipWithMorph tooltipImage="/images/colophon.jpg">
-            <ColophonIcon />
-          </TooltipWithMorph>
-          <div></div>
-          <TooltipWithMorph tooltipImage="/images/skills.jpg">
-            <SkillsIcon />
-          </TooltipWithMorph>
-        </div>
-        <hr className="divider" />
-        <div className="row"></div>
-        <hr className="divider" />
-        <div className="row"></div>
+          </>
+        )}
       </main>
 
       <footer className="footer">

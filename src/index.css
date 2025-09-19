@@ -18,7 +18,7 @@
 
 /* Theme 4 */
 .theme-4 {
-  --bg: #ffca3a;
+  --bg: #c69f37;
   --fg: #4a3fdb;
 }
 
@@ -59,7 +59,6 @@
   src:
     url("/fonts/TT_Commons_Pro_Medium.woff2") format("woff2"),
     url("/fonts/TT_Commons_Pro_Medium.woff") format("woff");
-  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -78,8 +77,8 @@ header {
 body {
   margin: 0;
   font-family: "TT Commons Pro", sans-serif;
-  background-color: #edede9;
-  color: #252422;
+  font-weight: normal;
+  letter-spacing: 0.05ch;
   padding: 0;
 }
 
@@ -109,7 +108,7 @@ body {
   position: relative;
   border: none;
   margin: 0;
-  border-top: 2.5px solid currentColor;
+  border-top: 2px solid currentColor;
 }
 
 .row {
@@ -122,9 +121,24 @@ body {
 }
 
 h1 {
-  font-size: 2.5rem;
-  font-weight: 400;
+  font-size: 2rem;
+  font-weight: normal;
   letter-spacing: 0.1ch;
+}
+
+h2 {
+  letter-spacing: 0.1ch;
+  font-weight: normal;
+}
+
+h4 {
+  margin-block-start: 0;
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-weight: normal;
 }
 
 footer {
@@ -143,6 +157,39 @@ footer {
   height: 50px;
   width: 50px;
   padding: 2rem;
+}
+
+
+.contrast-icon path {
+  fill: currentColor;
+}
+
+.contrast-icon {
+  height: 50px;
+  width: 50px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-right: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  color: var(--fg); /* default */
+  cursor: pointer;
+}
+
+.contrast-icon:hover {
+  animation-name: contrastThemeCycle;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-direction: alternate;
+}
+
+@keyframes contrastThemeCycle {
+  0%   { color: #252422; } /* theme-1 --fg */
+  25%  { color: #ffd6ff; } /* theme-2 --fg */
+  50%  { color: #e5383b; } /* theme-3 --fg */
+  75%  { color: #4a3fdb; } /* theme-4 --fg */
+  100% { color: #00ffd8; } /* theme-5 --fg */
 }
 
 .footer-icons {
@@ -177,14 +224,21 @@ footer {
   column-count: 2;
   column-gap: 2rem;
   margin: 0;
+  font-size: 20px;
 }
+
+.experience-content {
+  font-size: 20px;
+  padding: 2rem;
+}
+
 
 .under-row .about-content p:first-child {
   margin-top: 0;
 }
 
 .under-row.slide-down {
-  max-height: none; 
+  max-height: none;
   opacity: 1;
 }
 
@@ -200,7 +254,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem; 
+  padding: 2rem;
   box-sizing: content-box;
 }
 
@@ -212,21 +266,482 @@ footer {
 .plus-icon.rotated {
   transform: rotate(45deg);
 }
+
+.project-summary-row {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0;
+  z-index: 0;
+}
+
+.project-summary-left,
+.project-summary-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 1;
+}
+
+.project-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 500;
+  pointer-events: none; /* makes it "click-through" if necessary */
+}
+
+.badge-circle {
+  width: 50px;
+  height: 50px;
+  padding: 2rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.badge-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-year {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.8rem;
+  border-radius: 1.25rem;
+  font-weight: 400;
+  background-color: transparent;
+  border: 1.5px solid currentColor;
+  color: inherit;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+/* Year filter look for the left pill (outlined, matches .project-year) */
+.section-filter-pill--year {
+  background: transparent;
+  color: inherit;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.8rem;
+  border-radius: 1.25rem;
+  border: 1.5px solid currentColor;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.project-year,
+.filter-clear {
+  cursor: pointer;
+}
+.project-year:focus-visible,
+.filter-clear:focus-visible,
+.project-tag:focus-visible,
+.section-filter-pill:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.project-tag {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.8rem;
+  border-radius: 1.25rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  white-space: nowrap;
+  color: #fff; /* default fallback */
+  background-color: #999; /* default fallback */
+  border: none !important;
+  cursor: pointer;
+}
+
+/* 3 columns when we have images; else keep your current layout */
+.project-content.with-carousel {
+  display: grid;
+  grid-template-columns: 1.2fr 1.2fr 0.3fr; /* carousel | description | meta */
+  gap: 2rem;
+  align-items: start;
+}
+
+/* --- Carousel --- */
+.project-carousel {
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  cursor: grab;
+}
+.carousel-track:active {
+  cursor: grabbing;
+}
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: center; /* each slide locks */
+}
+.carousel-slide img {
+  display: block;
+  width: 100%;
+  height: 500px; /* 👈 set a fixed height (adjust as you like) */
+  object-fit: cover; /* 👈 fills the box, crops excess */
+  border-radius: 14px;
+}
+
+/* dots */
+.carousel-dots {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+  justify-content: center;
+}
+.dot {
+  width: 22px;
+  height: 2px;
+  border: 0;
+  background: var(--dot-idle, rgba(0, 0, 0, 0.25));
+  border-radius: 2px;
+  padding: 0;
+  cursor: pointer;
+}
+.dot.active {
+  background: var(--dot-active, currentColor);
+}
+.fade-carousel-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fade-carousel {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.fade-slide {
+  position: absolute;
+  inset: 0; /* shorthand for top:0, left:0, right:0, bottom:0 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+.fade-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* dots are now below, not overlay */
+.fade-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 8px; /* space between image + dots */
+}
+.fade-dots .dot {
+  width: 22px;
+  height: 2px;
+  border: 0;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.fade-dots .dot.active {
+  background: currentColor;
+}
+
+.pill,
+.filter-chip {
+  border: 1.5px solid var(--fg);
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--fg);
+  line-height: 1;
+}
+
+.plus-icon-wrapper {
+  width: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.plus-icon {
+  transition: transform 250ms;
+  transform-origin: 50% 50%;
+}
+.plus-icon.rotated {
+  transform: rotate(45deg);
+}
+
+/* Filter bar from earlier */
+.filter-bar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid var(--fg);
+  background: var(--bg);
+  z-index: 5;
+}
+.filter-label {
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+.section-filter-pill {
+  margin-left: 2rem;
+  pointer-events: none; /* ensure not interactive */
+  cursor: default !important;
+}
+
+/* Left pill spacing + not clickable (wins vs earlier rules) */
+.project-tag.section-filter-pill {
+  margin-left: 2rem;
+  pointer-events: none;
+  cursor: default !important;
+  border: none !important; /* guard against any shared 'pill' styles */
+}
+
+.filter-clear {
+  margin-left: auto;
+  background: transparent;
+  color: inherit;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.8rem;
+  border-radius: 1.25rem;
+  border: 1.5px solid currentColor;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+/* FINAL OVERRIDES — ensure tag colours always beat grey fallback */
+.project-tag.tag-artist,
+.section-filter-pill.tag-artist {
+  background-color: #5f34f5 !important;
+  color: #fff !important;
+}
+
+.project-tag.tag-shopify,
+.section-filter-pill.tag-shopify {
+  background-color: #ffc700 !important;
+  color: #000 !important;
+}
+
+.project-tag.tag-data-viz,
+.section-filter-pill.tag-data-viz {
+  background-color: #a8f8b1 !important;
+  color: #000 !important;
+}
+
+.project-tag.tag-react,
+.section-filter-pill.tag-react {
+  background-color: #61dafb !important;
+  color: #000 !important;
+}
+
+.project-tag.tag-three-js,
+.section-filter-pill.tag-three-js {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.project-tag.tag-d3,
+.section-filter-pill.tag-d3 {
+  background-color: #f67400 !important;
+  color: #fff !important;
+}
+
+/* Responsive: collapse to two columns or stack */
+@media (max-width: 900px) {
+  .project-content.with-carousel {
+    grid-template-columns: 1fr; /* stack */
+  }
+  .project-meta {
+    margin-top: 0.5rem;
+  }
+}
+
+.tag-artist {
+  background-color: #5f34f5;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.tag-shopify {
+  background-color: #ffc700;
+  color: black;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.tag-data-viz {
+  background-color: #a8f8b1;
+  color: black;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.project-card {
+  padding: 2rem;
+}
+
+.project-content {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.project-description {
+  flex: 2;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.project-meta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 200px;
+}
+
+.stack-section h4,
+.link-section h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05ch;
+  border-bottom: 2px dotted currentColor;
+  padding-bottom: 0.75rem;
+}
+
+.stack-tags {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.link-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Tech stack pills */
+.tech-pill {
+  padding: 0.35rem 0.85rem;
+  border-radius: 1.25rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  width: fit-content;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+/* Visit button */
+.visit-pill {
+  padding: 0.4rem 1rem;
+  border-radius: 1.25rem;
+  background-color: #c3b547;
+  color: #fff !important;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+  width: fit-content;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.under-divider {
+  color: inherit;
+  position: relative;
+  border: none;
+  margin: 0;
+  border-top: 2.5px dotted currentColor;
+}
+
+.inner-plus {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+}
+
+.icon-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.icon {
+  width: 40px;
+  cursor: pointer;
+}
+
+.fullscreen-svg {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+
+.tooltip-blob {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999999;
+  pointer-events: none;
+  transform: translateZ(0);
+}
+
 /* Tablet and below (≤768px) */
 @media (max-width: 768px) {
   h1 {
-    font-size: 2rem;
+    font-size: 1.1rem;
     letter-spacing: 0.05ch;
+  }
+
+  h2 {
+    font-size: 0.8rem;
+    letter-spacing: 0.05ch;
+  }
+
+  .project-title {
+    text-align: center;
+    padding-left: 1rem;
   }
 
   .row {
     height: 2.1rem;
   }
 
+  .plus-icon {
+    width: 22.73px;
+    height: 22.73px;
+  }
+
   .icon {
-    width: 40px;
-    height: 40px;
-    padding: 1.5rem;
+    width: 22.73px;
+    height: 22.73px;
+    padding: 0;
   }
 
   .footer {
@@ -234,57 +749,101 @@ footer {
     text-align: center;
     gap: 1.5rem;
   }
-}
 
-/* Large phones (≤600px) */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 1.75rem;
+  .project-content {
+    flex-direction: column;
+    gap: 1rem;
   }
 
-  .icon {
-    width: 35px;
-    height: 35px;
-    padding: 1rem;
+  .project-description {
+    font-size: 0.8rem;
   }
 
-  .footer-icon {
-    width: 25px;
-    height: 25px;
-  }
-}
-
-/* Typical mobile (≤480px) */
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.5rem;
+  .fade-carousel {
+    height: 300px;
   }
 
-  .icon {
-    width: 30px;
-    height: 30px;
-    padding: 0.75rem;
+  .project-meta {
+    width: 100%;
+    flex: unset;
   }
 
-  .footer {
-    padding: 1.5rem;
-  }
-}
-
-/* Very small phones (≤360px) */
-@media (max-width: 360px) {
-  h1 {
-    font-size: 1.25rem;
+  .about-content {
+    column-count: 1;
+    font-size: 0.8rem;
   }
 
-  .icon {
-    width: 28px;
-    height: 28px;
-    padding: 0.5rem;
+  .experience-content {
+    font-size: 0.8rem;
   }
 
-  .footer-icon {
-    width: 22px;
-    height: 22px;
+  .project-summary-row {
+    position: relative;
+    display: flex;
+    justify-content: none;
+    align-items: center;
+    padding: 0;
+    z-index: 0;
+  }
+
+  .project-summary-left,
+  .project-summary-right {
+    display: flex;
+    align-items: center;
+    gap: 0rem;
+    z-index: 1;
+  }
+
+  .badge-circle {
+    width: 11%;
+    height: 11%;
+  }
+
+  .icon-wrapper {
+    padding-left: 0.8rem;
+    padding-right: 0.5rem;
+  }
+  .plus-icon-wrapper {
+    padding-left: 0;
+    padding-right: 0.8rem;
+  }
+
+  .project-tag {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.4rem;
+  }
+  .project-year {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.4rem;
+    border: 1px solid currentColor;
+  }
+
+  .divider {
+    border-top: 1.8px solid currentColor;
+  }
+
+  .contrast-icon {
+    width: 22.73px;
+    height: 22.73px;
+    padding-right: 0.8rem;
+  }
+
+  .project-meta {
+    max-width: 100%;
+    gap: 1rem;
+  }
+
+  /* .name-title {
+    padding-left: 1.5rem;
+  } */
+
+  .tech-pill {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.6rem;
+  }
+
+  .visit-pill {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.6rem;
   }
 }
