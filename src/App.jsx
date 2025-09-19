@@ -33,7 +33,26 @@ function App() {
 
   const toggleSection = (section) => {
     setActiveSection((prev) => (prev === section ? null : section));
+  
+    const prefersNoMotion =
+      window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+  
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        const el = document.getElementById(section);
+        if (!el) return;
+  
+        // If you want to snap specifically to the header row:
+        // const header = el.querySelector('.row') || el;
+  
+        el.scrollIntoView({
+          behavior: prefersNoMotion ? "auto" : "smooth",
+          block: "start",
+        });
+      });
+    });
   };
+  
 
   const handleThemeToggle = () => {
     setThemeIndex((prev) => (prev % totalThemes) + 1);

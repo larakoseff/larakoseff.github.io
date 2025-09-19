@@ -1,3 +1,9 @@
+html {
+  scroll-behavior: smooth;
+  /* set this to your sticky header / top spacing height */
+  scroll-padding-top: 72px; 
+}
+
 /* Theme 1: Default */
 .theme-1 {
   --bg: #edede9;
@@ -320,6 +326,10 @@ footer {
   color: inherit;
   white-space: nowrap;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.section {
+  scroll-margin-top: 72px; /* same as scroll-padding-top */
 }
 
 /* Year filter look for the left pill (outlined, matches .project-year) */
