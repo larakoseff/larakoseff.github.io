@@ -1,17 +1,24 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import projectsData from "../data/projectsData";
 import ProjectCard from "./ProjectCard";
 import PlusIcon from "./icons/PlusIcon";
 import TooltipWithMorph from "../TooltipWithMorph";
 
 export default function WebDevSection({
-  activeFilter, // { type: 'year'|'tag', value } | null
-  onFilter, // (f) => void
-  onClearFilter, // () => void
-  projects, // pre-filtered array from App
-  resetToken,  
+  activeFilter,    // { type: 'year'|'tag', value } | null
+  onFilter,        // (f) => void
+  onClearFilter,   // () => void
+  projects,        // pre-filtered array from App
+  resetToken,      // from ProjectSection (used to close all when section closes)
 }) {
   const [openProject, setOpenProject] = useState(null);
+
+  // --- refs for each project's header row so we can scroll to it
+  const rowRefs = useRef({});
+  const setRowRef = (id) => (el) => {
+    if (el) rowRefs.current[id] = el;
+    else delete rowRefs.current[id];
+  };
 
   // Fallback to local slice if parent didn't pass pre-filtered data
   const base = Array.isArray(projects)
@@ -30,15 +37,46 @@ export default function WebDevSection({
 
   const visible = Array.isArray(projects) ? base : base.filter(matchesFilter);
 
-    // Close any open project when the parent section toggles (open/closed)
-    useEffect(() => {
-      setOpenProject(null);
-    }, [resetToken]);
+  // Close any open project when the parent section toggles (open/closed)
+  useEffect(() => {
+    setOpenProject(null);
+  }, [resetToken]);
 
   // Close any open project when the filter changes
   useEffect(() => {
     setOpenProject(null);
   }, [activeFilter]);
+
+  // Scroll the opened project's header row into view (top of viewport)
+  useEffect(() => {
+    if (!openProject) return;
+    const el = rowRefs.current[openProject];
+    if (!el) return;
+
+    const prefersNoMotion =
+      window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+
+    // Wait for any previous row to collapse + current row to expand (layout settle)
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        // If the page (window) scrolls:
+        el.scrollIntoView({
+          behavior: prefersNoMotion ? "auto" : "smooth",
+          block: "start",
+        });
+
+        // If instead your content scrolls inside a container (e.g., .container with overflow),
+        // comment the above and use this:
+        // const scroller = document.querySelector(".container");
+        // if (scroller) {
+        //   const sRect = scroller.getBoundingClientRect();
+        //   const eRect = el.getBoundingClientRect();
+        //   const top = eRect.top - sRect.top + scroller.scrollTop - 72; // 72 matches CSS buffer
+        //   scroller.scrollTo({ top, behavior: prefersNoMotion ? "auto" : "smooth" });
+        // }
+      });
+    });
+  }, [openProject]);
 
   const toggleProject = (id) => {
     setOpenProject((prev) => (prev === id ? null : id));
@@ -64,8 +102,11 @@ export default function WebDevSection({
 
         return (
           <div key={project.id}>
-            {/* Summary row */}
-            <div className="project-summary-row">
+            {/* Summary row (anchor we scroll to) */}
+            <div
+              className="project-summary-row"
+              ref={setRowRef(project.id)}
+            >
               <div className="project-summary-left">
                 <TooltipWithMorph
                   tooltipImage={project.tooltip}
