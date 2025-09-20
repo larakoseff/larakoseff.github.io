@@ -1,4 +1,5 @@
-import Section from "./Section";
+import StaticSection from "./StaticSection";
+
 
 export default function EducationSection({
   id = "education",
@@ -9,7 +10,7 @@ export default function EducationSection({
   toggleSection,
 }) {
   return (
-    <Section
+    <StaticSection
       id={id}
       title={title}
       icon={icon}
@@ -51,6 +52,6 @@ export default function EducationSection({
           </p>
         </div>
       </div>
-    </Section>
+    </StaticSection>
   );
 }

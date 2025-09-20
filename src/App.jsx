@@ -22,6 +22,7 @@ import EducationSection from "./components/EducationSection";
 import ColophonSection from "./components/ColophonSection";
 import "./index.css";
 import projectsData from "./data/projectsData";
+import ProjectSection from "./components/ProjectSection";
 
 function App() {
   const totalThemes = 5;
@@ -194,7 +195,7 @@ function App() {
 
         {/* Project sections: only render those with matches */}
         {showWeb && (
-          <Section
+          <ProjectSection
             id="web"
             title="Web design + development"
             icon={WebIcon}
@@ -210,11 +211,11 @@ function App() {
               onFilter={handleFilter}
               onClearFilter={clearFilter}
             />
-          </Section>
+          </ProjectSection>
         )}
 
         {showWriting && (
-          <Section
+          <ProjectSection
             id="writing"
             title="Writing + design"
             icon={WritingIcon}
@@ -230,11 +231,11 @@ function App() {
               onFilter={handleFilter}
               onClearFilter={clearFilter}
             />
-          </Section>
+          </ProjectSection>
         )}
 
         {showCurating && (
-          <Section
+          <ProjectSection
             id="curating"
             title="Curating + projects"
             icon={ProjectsIcon}
@@ -250,7 +251,7 @@ function App() {
               onFilter={handleFilter}
               onClearFilter={clearFilter}
             />
-          </Section>
+          </ProjectSection>
         )}
 
         {/* When filtering & no project matches */}

@@ -1,4 +1,4 @@
-import Section from "./Section";
+import StaticSection from "./StaticSection";
 
 export default function ColophonSection({
   id = "colophon",
@@ -9,7 +9,7 @@ export default function ColophonSection({
   toggleSection,
 }) {
   return (
-    <Section
+    <StaticSection
       id={id}
       title={title}
       icon={icon}
@@ -26,6 +26,6 @@ export default function ColophonSection({
           <a href="mailto:larakoseff@gmail.com">larakoseff@gmail.com</a>.
         </p>
       </div>
-    </Section>
+    </StaticSection>
   );
 }

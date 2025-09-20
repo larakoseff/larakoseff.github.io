@@ -1,4 +1,4 @@
-import Section from "./Section";
+import StaticSection from "./StaticSection";
 
 export default function ExperienceSection({
   id = "experience",
@@ -9,7 +9,7 @@ export default function ExperienceSection({
   toggleSection,
 }) {
   return (
-    <Section
+    <StaticSection
       id={id}
       title={title}
       icon={icon}
@@ -100,18 +100,18 @@ export default function ExperienceSection({
             (both existing and new); writing press releases; managing
             communications and brand representation; liaising with the press;
             maintaining website content; writing, editing, and designing
-            in-house materials such as catalogues, books, sales
-            documents, and online publications; compiling the monthly newsletter
-            and creating social media content; conceptualising and writing speeches, all
-            art fair applications; managing and attending art fairs (including
-            Paris Photo, Frieze New York and London, SP-Arte); expanding
-            networks with writers, curators, collectors, and museum
-            professionals; hosting museum delegations and designing tailored
-            itineraries with studio visits and special presentations; and
-            conducting research on new artists.
+            in-house materials such as catalogues, books, sales documents, and
+            online publications; compiling the monthly newsletter and creating
+            social media content; conceptualising and writing speeches, all art
+            fair applications; managing and attending art fairs (including Paris
+            Photo, Frieze New York and London, SP-Arte); expanding networks with
+            writers, curators, collectors, and museum professionals; hosting
+            museum delegations and designing tailored itineraries with studio
+            visits and special presentations; and conducting research on new
+            artists.
           </p>
         </div>
       </div>
-    </Section>
+    </StaticSection>
   );
 }

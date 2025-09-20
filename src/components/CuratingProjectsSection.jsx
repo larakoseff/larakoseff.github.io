@@ -9,6 +9,7 @@ export default function CuratingProjectsSection({
   onFilter, // (f) => void
   onClearFilter, // () => void
   projects, // pre-filtered array from App
+  resetToken,
 }) {
   const [openProject, setOpenProject] = useState(null);
 
@@ -28,6 +29,11 @@ export default function CuratingProjectsSection({
   };
 
   const visible = Array.isArray(projects) ? base : base.filter(matchesFilter);
+
+  // Close any open project when the parent section toggles (open/closed)
+  useEffect(() => {
+    setOpenProject(null);
+  }, [resetToken]);
 
   // Close any open project when the filter changes
   useEffect(() => {

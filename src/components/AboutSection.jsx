@@ -1,4 +1,4 @@
-import Section from "./Section";
+import StaticSection from "./StaticSection";
 
 export default function AboutSection({
   id = "about-me",
@@ -9,7 +9,7 @@ export default function AboutSection({
   toggleSection,
 }) {
   return (
-    <Section
+    <StaticSection
       id={id}
       title={title}
       icon={icon} // pass the component (e.g. AboutIcon), not <AboutIcon />
@@ -60,6 +60,6 @@ export default function AboutSection({
           platform I worked on until the end of 2022.
         </p>
       </div>
-    </Section>
+    </StaticSection>
   );
 }
