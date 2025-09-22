@@ -11,13 +11,13 @@ const projectsData = [
     description: (
       <>
         Created under the auspices of INCCA (Independent Network for
-        Contemporary Culture & Art), this interactive map was a project I led —
+        Contemporary Culture & Art), this interactive map was a project I led –
         conducting the initial research and designing and developing the
-        platform using React and Three.js. It draws on findings from the 2024
+        platform using React and D3.js. It draws on findings from the 2024
         Inclusive Economies Programme, a collaboration between the Gauteng
         City-Region Observatory (GCRO) and the Gauteng Department of Economic
         Development. The map visualises the diverse supportive infrastructure of
-        the cultural and creative industries in Gauteng — South Africa’s most
+        the cultural and creative industries in Gauteng – South Africa’s most
         populous and economically vibrant province. From government entities,
         associations, incubators, and hubs to galleries, academic partnerships,
         and private initiatives, it highlights examples of innovative
@@ -87,7 +87,7 @@ const projectsData = [
         of the project at Victoria Yards, this time mentoring artists through
         the process of producing their first solo exhibitions. Both editions
         were supported by the National Arts Council South Africa (NAC) through
-        the Presidential Employment Stimulus Programme (PESP 4 and 5).",
+        the Presidential Employment Stimulus Programme (PESP 4 and 5).
       </>
     ),
     link: { label: "Read more", url: "https://incca.org.za/Art-After-Baby" },
@@ -102,7 +102,7 @@ const projectsData = [
   {
     id: "tiny-letters",
     section: "web",
-    title: "Tiny Letters for Mothers",
+    title: "Tiny letters for mothers",
     year: 2024,
     tags: ["Data viz"],
     stack: ["React", "D3.js"],
@@ -112,8 +112,8 @@ const projectsData = [
         project I co-created with Dr Dee Marco after we worked together on the
         curatorial initiative Art After Baby. We shared a strong interest in
         finding new ways to surface the small, often unspoken stories of early
-        parenting—moments that are powerful and universal, but which often go
-        unrecorded.The first “data story” asks mothers and parents worldwide to
+        parenting – moments that are powerful and universal, but which often go
+        unrecorded. The first “data story” asks mothers and parents worldwide to
         recall either their birth story or their first days at home with a new
         baby. Using D3.js, I developed an interactive data visualisation that
         transforms these memories into portraits of language, frequency, and
@@ -121,10 +121,10 @@ const projectsData = [
         important to us that the technology serve the storytelling, rather than
         strip it away. This project is part of INCCA’s “pay it forward”
         imperative, supported in its early stages by the NAC’s PESP 4 award. For
-        me, Tiny Letters is as much about collective remembering as it is about
-        digital design. It builds a global network of experiences of motherhood
-        and parenthood, creating a living archive that values care, resilience,
-        and vulnerability.
+        me, <i>Tiny letters</i> is as much about collective remembering as it is
+        about digital design. It builds a global network of experiences of
+        motherhood and parenthood, creating a living archive that values care,
+        resilience, and vulnerability.
       </>
     ),
     badge: "/images/tiny-badge.png",
@@ -254,18 +254,15 @@ const projectsData = [
         edited by Véronique Chagnon-Burke and Caterina Toschi. Titled "Linda
         Givon, the Goodman Gallery, and the Politics of the Contemporary Art
         Market in South Africa, 1966–1990", the paper featurs in the chapter
-        titled "The Rise of New Markets", and was the only contribution to consider a
-        gallery established on the African continent.
+        titled "The Rise of New Markets", and was the only contribution to
+        consider a gallery established on the African continent.
       </>
     ),
     link: {
       label: "More info",
       url: "https://www.bloomsbury.com/uk/women-art-dealers-9781350292451/",
     },
-    images: [
-      "/images/wad-01.jpg",
-      "/images/wad-tooltip.jpg",
-    ],
+    images: ["/images/wad-01.jpg", "/images/wad-tooltip.jpg"],
   },
 
   {
@@ -278,9 +275,9 @@ const projectsData = [
       <>
         In 2024, I worked with Something Good Studio on a brand merger and full
         website redesign, consolidating their Shopify platform and helping them
-        better tell the story of their artist-led collaborations. I continue to
-        work with them as an art liaison, offering digital solutions that sit at
-        the intersection of design, storytelling, and commerce. My approach with
+        tell the story of their artist-led collaborations. I continue to work
+        with them as an art liaison, offering digital solutions that sit at the
+        intersection of design, storytelling, and commerce. My approach with
         this project was not only technical – implementing responsive design,
         refining the product catalogue, and optimising the online store – but
         also conceptual. I wanted the digital space to reflect their ethos of
