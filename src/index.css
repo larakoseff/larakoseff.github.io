@@ -12,20 +12,20 @@ html {
 
 /* Theme 2 */
 .theme-2 {
-  --bg: #3a5a40;
-  --fg: #ffd6ff;
+  --bg: #00492b;
+  --fg: #ebaeed;
 }
 
 /* Theme 3 */
 .theme-3 {
-  --bg: #b9fbc0;
-  --fg: #e5383b;
+  --bg: #634d1c;
+  --fg: #b28ef7;
 }
 
 /* Theme 4 */
 .theme-4 {
-  --bg: #c69f37;
-  --fg: #4a3fdb;
+  --bg: #f2b07f;
+  --fg: #0700c2;
 }
 
 /* Theme 5 */
@@ -108,6 +108,20 @@ body {
   width: 100%;
   box-sizing: border-box;
 }
+
+
+/* each row fills the viewport and pins at the top */
+.stack-row {
+  position: sticky;
+  top: 0;
+  height: 100vh;           /* each covers the screen */
+  display: grid;           /* center your existing row layout nicely */
+  align-content: start;    /* or center, depending on your design */
+}
+
+/* optional: subtle depth feel as rows stack */
+.stack-row { will-change: transform; }
+
 
 .divider {
   color: inherit; /* ensures currentColor reflects the parent */
@@ -332,6 +346,7 @@ footer {
 .section {
   scroll-margin-top: 72px; /* same as scroll-padding-top */
 }
+
 
 /* Year filter look for the left pill (outlined, matches .project-year) */
 .section-filter-pill--year {
@@ -768,6 +783,10 @@ footer {
 
   .project-description {
     font-size: 1rem;
+  }
+
+  .filter-bar {
+    border-bottom: 1.8px solid var(--fg);
   }
 
   .fade-carousel {
